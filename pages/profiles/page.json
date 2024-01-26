@@ -1,0 +1,62 @@
+{
+	"name": "profiles",
+	"users": [
+		{
+			"name": "Name",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"data": {
+				"bio": "Hello world"
+			}
+		},
+		{
+			"name": "Name",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"data": {
+				"bio": "Hello world"
+			}
+		},
+		{
+			"name": "Name",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"data": {
+				"bio": "Hello world"
+			}
+		},
+		{
+			"name": "Name",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"data": {
+				"bio": "Hello world"
+			}
+		},
+		{
+			"name": "Name",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"data": {
+				"bio": "Hello world"
+			}
+		},
+		{
+			"name": "Name",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"data": {
+				"bio": "Hello world"
+			}
+		},
+		{
+			"name": "Name",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"data": {
+				"bio": "Hello world"
+			}
+		},
+		{
+			"name": "Name",
+			"thumb": "https://neryxomka.com/template/img/welcome.png",
+			"data": {
+				"bio": "Hello world"
+			}
+		}
+	],
+	"role": "designer"
+}

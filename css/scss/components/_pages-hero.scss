@@ -1,0 +1,51 @@
+.pages-hero {
+    padding-top: 155px;
+	padding-bottom: 80px;
+
+    background: var(--primary-linear-gradient);
+
+    &__container {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+
+		@media (max-width: 991px) {
+			flex-direction: column;
+            gap: 50px;
+		}
+    }
+
+    &__title {
+        font-size: clamp(2.5rem, 2.045rem + 2.27vw, 3.75rem);
+		line-height: 1.2;
+		font-weight: 500;
+		max-width: 550px;
+    }
+
+    &__img {
+        max-width: 500px;
+		min-width: 400px;
+		aspect-ratio: 3 / 2;
+
+		@media (max-width: 991px) {
+			min-width: 200px;
+		}
+
+       
+
+		img {
+			height: 100%;
+			width: 100%;
+
+			border-radius: 20px;
+
+			object-fit: cover;
+
+            @media (max-width: 575px) { 
+                border-radius: 10px;
+            }
+		}
+    }
+}

@@ -1,0 +1,134 @@
+.themes-hero {
+	min-height: 100vh;
+	padding-top: clamp(10.625rem, 9.034rem + 7.95vw, 15rem);
+	padding-bottom: clamp(2.5rem, -1.136rem + 18.18vw, 12.5rem);
+
+	background: var(--primary-linear-gradient);
+
+	&__container {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		gap: 20px;
+
+		@media (max-width: 991px) {
+			align-items: center;
+			gap: 60px;
+		}
+	}
+
+	&__main {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: start;
+		gap: 50px;
+
+		@media (max-width: 991px) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__title {
+		font-size: clamp(2.5rem, 1.773rem + 3.64vw, 4.5rem);
+		line-height: 1.2;
+		font-weight: 500;
+		max-width: 700px;
+	}
+
+	&__img {
+		max-width: 700px;
+		min-width: 500px;
+		aspect-ratio: 3 / 2;
+
+		@media (max-width: 991px) {
+			min-width: 200px;
+		}
+
+		img {
+			height: 100%;
+			width: 100%;
+
+			border-radius: 40px;
+
+			object-fit: cover;
+		}
+	}
+
+	&__link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 20px;
+		background: var(--secondary-color);
+		width: 200px;
+		height: 45px;
+
+		color: var(--primary-color);
+		font-size: 20px;
+		font-weight: 600;
+	}
+}
+
+.themes-wrapper {
+	padding: clamp(6.25rem, 5.114rem + 5.68vw, 9.375rem) 0;
+
+	&__container {
+		display: flex;
+		align-items: start;
+		justify-content: space-between;
+		gap: 80px;
+		flex-wrap: wrap;
+
+		@media (max-width: 991px) {
+			flex-direction: column;
+		}
+	}
+}
+.themes-card {
+	width: calc(50% - 40px);
+
+	@media (max-width: 991px) {
+		width: 100%;
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+		max-height: 450px;
+		aspect-ratio: 3 / 2;
+
+		img {
+			width: 100%;
+			height: 100%;
+
+			object-fit: cover;
+
+			border-radius: 20px;
+		}
+	}
+
+	&__text {
+		margin-top: 10px;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		align-items: start;
+	}
+
+	&__title {
+		color: var(--secondary-color);
+		font-size: clamp(1.438rem, 1.324rem + 0.57vw, 1.75rem);
+		font-weight: 500;
+		max-width: 70%;
+	}
+
+	a.themes-card__link {
+		color: var(--secondary-color);
+		font-size: clamp(0.938rem, 0.824rem + 0.57vw, 1.25rem);
+		font-weight: 400;
+		text-decoration-line: underline;
+	}
+}

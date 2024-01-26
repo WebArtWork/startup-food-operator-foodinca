@@ -1,0 +1,165 @@
+<section class="product">
+    <div class="product__container">
+        <div class="product__main">
+            <div class="product__img">
+                <div class="product__slider product-slider swiper">
+                    <div class="product-slider__wrapper swiper-wrapper">
+                        <div class="product-slider__slide product-slide swiper-slide">
+                            <a data-fancybox="product-gallery" data-src="{{{product.thumb}}}">
+                                <img src="{{{product.thumb}}}" alt="{{{product.name}}}" class="product-slide__img" />
+                            </a>
+                        </div>
+                        {% for thumb in product.thumbs %}
+                        <div class="product-slider__slide product-slide swiper-slide">
+                            <a data-fancybox="product-gallery" data-src="{{{thumb}}}">
+                                <img src="{{{thumb}}}" alt="{{{product.name}}}" class="product-slide__img" />
+                            </a>
+                        </div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="product-slider__pagination swiper-pagination"></div>
+                </div>
+
+                <div class="product__slider_mini product-slider-mini swiper">
+                    <div class="product-slider-mini__wrapper swiper-wrapper">
+                        <div class="product-slider-mini__slide product-mini-slide swiper-slide">
+                            <img src="{{{product.thumb}}}" alt="{{{product.name}}}" class="product-mini-slide__img" />
+                        </div>
+                        {% for thumb in product.thumbs %}
+                        <div class="product-slider-mini__slide product-mini-slide swiper-slide">
+                            <img src="{{{thumb}}}" alt="{{{product.name}}}" class="product-mini-slide__img" />
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <div class="product__info product-info">
+                <h2 class="product-info__name">{{{product.name}}}</h2>
+                <span class="product-info__price">400 $</span>
+                <p class="product-info__desc">{{{product.description}}}</p>
+                <div class="product-info__colors product-colors">
+                    <span class="product-colors__subtitle">Color</span>
+
+                    <div class="product-colors__wrapper">
+                        <span class="product-colors__color product-colors__color_active"
+                            style="background-color: pink"></span>
+                        <span class="product-colors__color" style="background-color: navajowhite"></span>
+                        <span class="product-colors__color" style="background-color: darkcyan"></span>
+                        <span class="product-colors__color" style="background-color: gold"></span>
+                        <span class="product-colors__color" style="background-color: greenyellow"></span>
+                    </div>
+
+                    <!--  {{{product.data.color}}} -->
+                </div>
+
+                <select class="product-info__sizes">
+                    <option value=" 0" class="product-info__size" disabled>
+                        Choose a Size
+                    </option>
+                    <option value="xs" class="product-info__size">XS</option>
+                    <option value="s" class="product-info__size">S</option>
+                    <option value="m" class="product-info__size">M</option>
+                    <option value="l" class="product-info__size" selected>
+                        L
+                    </option>
+                    <option value="xl" class="product-info__size">XL</option>
+                    <!-- {{{product.data.size}}} -->
+                </select>
+
+                <button class="product-info__size-guide" data-fancybox data-src="#dialog-content">
+                    Size Guide
+                </button>
+
+
+                <div class="product-info__details product-details">
+                    <span class="product-details__subtitle">Details</span>
+                    <p class="product-details__text">
+                        {{{product.data.details}}}
+                    </p>
+                </div>
+                <span class="product-info__store">
+                    The product of the Panianka store
+                </span>
+            </div>
+        </div>
+
+        <div id="dialog-content" class="product-info__size-guide-modal size-guide"
+            style="display: none; max-width: 900px">
+            <h3 style="text-align: center; font-weight: 600">Size Guide</h3>
+            <p style="text-align: center; font-weight: 300; margin-top: 20px">
+                Please see below for our current sizing options that we offer.
+                For any additional sizing questions or concerns please contact
+                us and we'll be happy to help.
+            </p>
+
+            <table style="width: 100%; border-collapse: collapse; margin-top: 20px">
+                <thead style="
+						border-bottom: 1px solid #777;
+						padding: 15px;
+						text-align: center;
+					">
+                    <tr>
+                        <th style="padding: 15px" scope="col">Size</th>
+                        <th scope="col">Bust</th>
+                        <th scope="col">Waist</th>
+                        <th scope="col">Hip</th>
+                    </tr>
+                </thead>
+                <tbody style="padding: 15px; text-align: center">
+                    <tr style="border-bottom: 1px solid #777">
+                        <td style="padding: 15px">XS</td>
+                        <td>32"-33"</td>
+                        <td>24"-25"</td>
+                        <td>35"-36"</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #777">
+                        <td style="padding: 15px">S</td>
+                        <td>34"-35"</td>
+                        <td>26"-27"</td>
+                        <td>37"-38"</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #777">
+                        <td style="padding: 15px">M</td>
+                        <td>36"-37"</td>
+                        <td>28"-29"</td>
+                        <td>39"-40"</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #777">
+                        <td style="padding: 15px">L</td>
+                        <td>38"-39"</td>
+                        <td>30"-32"</td>
+                        <td>41"-43"</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid #777">
+                        <td style="padding: 15px">XL</td>
+                        <td>40"-42"</td>
+                        <td>30"-35"</td>
+                        <td>44"-46"</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="product__also-like also-like">
+            <h3 class="also-like__title">You may also like</h3>
+
+            <div class="also-like__slider also-like-slider swiper">
+                <div class="also-like-slider__wrapper swiper-wrapper">
+                    {% for product in products %}
+                    <div class="also-like-slide swiper-slide">
+                        <a href="/product/{{{product.id}}}">
+                            <img src="{{{product.thumb}}}" alt="{{{product.name}}}" class="also-like-slide__img" /></a>
+
+                        <div class="also-like-slide__text">
+                            <a href="/product/{{{product.id}}}" class="also-like-slide__name">{{{product.name}}}</a>
+                            <span class="also-like-slide__price">{{{product.price}}}</span>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

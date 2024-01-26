@@ -1,0 +1,79 @@
+{
+    "title": "Page Title",
+    "product": {
+		"price": 123,
+		"name": "Name",
+		"description": "Description",
+		"thumbs": [
+            "https://neryxomka.com/template/img/welcome.png",
+            "https://neryxomka.com/template/img/welcome.png",
+            "https://neryxomka.com/template/img/welcome.png",
+            "https://neryxomka.com/template/img/welcome.png",
+            "https://neryxomka.com/template/img/welcome.png",
+            "https://neryxomka.com/template/img/welcome.png"
+
+        ],
+		"data": {
+			"article": "article",
+			"material": "material",
+			"color": "Red Blue White",
+			"size": "XS S M L XL",
+			"exchange_and_return": "exchange_and_return",
+			"details": "details",
+			"supply_and_payment": "supply_and_payment",
+			"free_returns": "free_returns",
+			"free_shipping": "free_shipping",
+			"warranty": "warranty"
+		}
+	},
+	"products": [
+        {
+            "name": "Name",
+            "short": "Short",
+            "price": 123,
+            "thumb": "https://neryxomka.com/template/img/welcome.png"
+        },
+        {
+            "name": "Name",
+            "short": "Short",
+            "price": 123,
+            "thumb": "https://neryxomka.com/template/img/welcome.png"
+        },
+        {
+            "name": "Name",
+            "short": "Short",
+            "price": 123,
+            "thumb": "https://neryxomka.com/template/img/welcome.png"
+        },
+        {
+            "name": "Name",
+            "short": "Short",
+            "price": 123,
+            "thumb": "https://neryxomka.com/template/img/welcome.png"
+        },
+        {
+            "name": "Name",
+            "short": "Short",
+            "price": 123,
+            "thumb": "https://neryxomka.com/template/img/welcome.png"
+        },
+        {
+            "name": "Name",
+            "short": "Short",
+            "price": 123,
+            "thumb": "https://neryxomka.com/template/img/welcome.png"
+        },
+        {
+            "name": "Name",
+            "short": "Short",
+            "price": 123,
+            "thumb": "https://neryxomka.com/template/img/welcome.png"
+        },
+        {
+            "name": "Name",
+            "short": "Short",
+            "price": 123,
+            "thumb": "https://neryxomka.com/template/img/welcome.png"
+        }
+    ]
+}

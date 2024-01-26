@@ -1,0 +1,48 @@
+<!-- {% for user in users %}
+<h1>{{{user.name}}}</h1>
+<img src="{{{user.thumb}}}" alt="{{{user.name}}}">
+<p>{{{user.data.bio}}}</p>
+{% endfor %} -->
+
+<section class="profiles-hero">
+	<div class="profiles-hero__container">
+		<div class="profiles-hero__main">
+			<h1 class="profiles-hero__title">Are you a {{{role}}}?</h1>
+			<p class="profiles-hero__text">
+				Add your contacts for collaboration with sellers
+			</p>
+			<a href="/manage/profile" class="profiles-hero__link">Add contacts</a>
+		</div>
+
+		<div class="profiles-hero__img">
+			<img src="/template/img/crafts-hero.jpg" alt="" />
+		</div>
+	</div>
+</section>
+
+<section class="profiles-main">
+	<div class="profiles-main__container">
+		<h2 class="profiles-main__title title">{{{headerTitle}}}</h2>
+		<p class="profiles-main__text">
+			{{{headerDescription}}}
+		</p>
+
+		<div class="profiles-main__wrapper">
+			{% for user in users %}
+			<a href="/profile">
+				<div class="profiles-main__card profiles-card">
+					<div class="profiles-card__img">
+						<img src="{{{user.thumb}}}" alt="{{{user.name}}}" />
+					</div>
+					<span class="profiles-card__title">{{{user.name}}}</span>
+				</div>
+			</a>
+			{% endfor %}
+		</div>
+
+	</div>
+</section>
+
+<section class="line">
+	<a href="/manage/profile" class="infinite-line"></a>
+</section>

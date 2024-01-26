@@ -1,0 +1,29 @@
+{
+    "title": "Page Title",
+    "stores": [{
+        "name": "Name",
+        "thumb": "https://neryxomka.com/template/img/welcome.png"
+    },
+    {
+        "name": "Name",
+        "thumb": "https://neryxomka.com/template/img/welcome.png"
+    },
+    {
+        "name": "Name",
+        "thumb": "https://neryxomka.com/template/img/welcome.png"
+    },
+    {
+        "name": "Name",
+        "thumb": "https://neryxomka.com/template/img/welcome.png"
+    }],
+    "categories": [
+		{
+			"name": "Category Name",
+			"tags": [
+				{
+					"name": "Tag Name"
+				}
+			]
+		}
+	]
+}

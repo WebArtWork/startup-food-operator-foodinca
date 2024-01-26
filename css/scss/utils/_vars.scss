@@ -1,0 +1,40 @@
+/* font family */
+$ff-base: "Roboto", sans-serif;
+$ff-title: "Lato", sans-serif;
+$ff-second: "Roboto", sans-serif;
+
+/* font-size */
+$fs: 16px;
+
+:root {
+	--container-width: 1480px;
+	--primary-color: #fcf9f2;
+	--primary-linear-gradient: radial-gradient(
+			105.12% 57.88% at 94.22% 105.31%,
+			rgba(255, 236, 129, 0.5) 0%,
+			rgba(255, 196, 0, 0) 99.92%
+		),
+		radial-gradient(
+			169.86% 83.86% at 11.36% -20.96%,
+			var(--tertiary-color),
+			var(--secondary-color)
+		);
+	--secondary-color: #31525B;
+	--tertiary-color: #f98f41;
+	--primary-font-family: "Montserrat";
+	--secondary-font-family: '';
+}
+
+// ===== COLORS =====
+
+$blue: #334d6e;
+$sky: #3498db;
+$skyL: #58acf5;
+$grey: #bdbdbd;
+$greyL: #f2f2f2;
+$red: #a31010;
+$redD: #8c1b0f;
+$green: #089227;
+$white: #fff;
+$black: #000;
+$dark: #000;

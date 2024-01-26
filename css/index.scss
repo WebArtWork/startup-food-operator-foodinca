@@ -1,0 +1,40 @@
+/* ------------------------------ Global styles ----------------------------- */
+
+/* ---------------------------------- Utils --------------------------------- */
+@import "scss/utils/reset";
+@import "scss/utils/fonts";
+@import "scss/utils/vars";
+// @import "scss/media";
+@import "scss/base";
+@import "scss/utils/mixins";
+/* --------------------------------- /Utils --------------------------------- */
+
+/* ---------------------------------- Pages --------------------------------- */
+@import "scss/pages/template";
+@import "scss/pages/index";
+@import "scss/pages/products";
+@import "scss/pages/product";
+@import "scss/pages/articles";
+@import "scss/pages/article";
+@import "scss/pages/stores";
+@import "scss/pages/store";
+@import "scss/pages/themes";
+@import "scss/pages/profiles";
+@import "scss/pages/profile";
+@import "scss/pages/designs";
+@import "scss/pages/team";
+/* --------------------------------- /Pages --------------------------------- */
+
+/* ------------------------------- Layout ------------------------------- */
+@import "scss/layout/topbar";
+@import "scss/layout/footer";
+@import "scss/layout/food";
+/* ------------------------------- /Layout ------------------------------ */
+
+/* ------------------------------- Components ------------------------------- */
+@import "scss/components/title";
+@import "scss/components/cta";
+@import "scss/components/back";
+@import "scss/components/pages-hero";
+@import "scss/components/search-bar";
+/* ------------------------------- /Components ------------------------------ */
