@@ -1,3 +1,4 @@
+console.log('started properly);
 let logo = document.querySelector('.topbar__logo');
 let eye = '<div class="eye"></div>';
 
