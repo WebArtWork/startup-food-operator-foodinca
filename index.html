@@ -124,8 +124,7 @@
 			</div>
 			<div class="footer__main footer-main">
 				<div class="footer-main__menu footer-menu">
-
-
+					<!--
 					{% if footer.articles.length %}
 					<div class="footer-menu__block">
 						<a href="/articles" class="footer-menu__title">Blog</a>
@@ -142,7 +141,8 @@
 						</ul>
 					</div>
 					{% endif %}
-
+  					-->
+					
 					{% if footer.themes.length %}
 					<div class="footer-menu__block">
 						<a href="/themes" class="footer-menu__title">{{{translate("Template.Themes")}}}</a>
@@ -164,7 +164,7 @@
 
 					{% if footer.stores.length %}
 					<div class="footer-menu__block">
-						<a href="/stores" class="footer-menu__title">{{{translate("Template.Stores")}}}</a>
+						<a href="/stores" class="footer-menu__title">{{{translate("Template.Partners")}}}</a>
 						<ul class="footer-menu__list">
 
 							{% for store in footer.stores %}
@@ -179,6 +179,7 @@
 					</div>
 					{% endif %}
 
+					<!--
 					{% if footer.designs.length %}
 					<div class="footer-menu__block">
 						<a href="/designs" class="footer-menu__title">{{{translate("Template.Designs")}}}</a>
@@ -195,8 +196,7 @@
 						</ul>
 					</div>
 					{% endif %}
-
-
+					
 					{% if footer.products.length %}
 					<div class="footer-menu__block">
 						<a href="/products" class="footer-menu__title">{{{translate("Template.Products")}}}</a>
@@ -213,6 +213,7 @@
 						</ul>
 					</div>
 					{% endif %}
+					-->
 				</div>
 
 				<div class="container">
@@ -220,8 +221,8 @@
 					<button class="en" onclick="selectLanguage('en')">
 						EN
 					</button> -
-					<button class="ua" onclick="selectLanguage('ua')">
-						UA
+					<button class="ua" onclick="selectLanguage('fr')">
+						FR
 					</button>
 				</div>
 
@@ -306,7 +307,7 @@
 				</div>
 
 				<div class="footer-rights__company">
-					<span>&#169;</span>Wawify, 2023
+					<span>&#169;</span>Food In Canada, 2024
 				</div>
 			</div>
 		</div>
