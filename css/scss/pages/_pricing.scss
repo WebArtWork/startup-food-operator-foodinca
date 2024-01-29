@@ -1,9 +1,9 @@
 .pricing_container{
     width: 100%;
-    font-size: 24px;;
+    font-size: 22px;;
 }
 .pricing_container img{
-    width: 65px;
+    width: 50px;
 }
 .pricing_container h1{
     text-align: center;
@@ -20,19 +20,20 @@ table {
   }
   .orange_block {
     background-color: var(--tertiary-color);
-    border-radius: 20px;
+    border-radius: 45px;
     display: flex;
     justify-content: end;
-    text-align: left;
-    font-size: 28px;
-    padding: 30px;
-    gap: 55px;
+    font-size: 24px;
+    padding: 25px;
+    text-align: center;
+    gap: 105px;
   }
   
   
   .pricing_container td {
     text-align: center;
-    text-align: left;
+    padding-right: 80px;
+    border-bottom: 2px solid rgba(150, 97, 0, 0.37);
   }
   
   .pricing_container a {
