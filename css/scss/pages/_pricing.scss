@@ -1,10 +1,14 @@
 .pricing_container{
     width: 100%;
+    font-size: 24px;;
+}
+.pricing_container img{
+    width: 65px;
 }
 .pricing_container h1{
     text-align: center;
     color: var(--secondary-color);
-    font-size: 24px;
+    font-size: 32px;
     padding: 10px;
 }
 table {
@@ -14,14 +18,17 @@ table {
   .pricing_container th, td {
     padding: 10px;
   }
-  
-  .pricing_container th {
+  .orange_block {
     background-color: var(--tertiary-color);
-    font-weight: bold;
+    border-radius: 20px;
+    display: flex;
+    justify-content: end;
     text-align: left;
-    font-size: 20px;
-    padding-top: 15px;
+    font-size: 28px;
+    padding: 30px;
+    gap: 55px;
   }
+  
   
   .pricing_container td {
     text-align: center;
@@ -34,6 +41,6 @@ table {
   }
   .pricing_container p{
     color: rgb(236, 236, 236);
-    font-size: 18px;
+    font-size: 20px;
     padding-top: 10px;
   }
