@@ -1,15 +1,17 @@
 /* --------------------------------- Footer --------------------------------- */
-
+.canada_text{
+	position: absolute;
+	left: 370px;
+	top: 50px;
+	font-size: 14px;
+	color: var(--secondary-color);
+}
 .footer {
 	padding: 50px 0;
-
 	width: 100%;
-
 	background: var(--secondary-color);
 	color: var(--primary-color);
-
 	font-weight: 700;
-
 	margin-top: auto;
 
 	&__logo {
@@ -30,6 +32,7 @@
 		}
 	}
 }
+
 
 .footer-main {
 	padding: clamp(1.875rem, 1.264rem + 3.06vw, 3.938rem) 0;
