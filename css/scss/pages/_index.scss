@@ -739,3 +739,119 @@
 }
 
 /* --------------------------------- /Cta --------------------------------- */
+
+/* ---------------------------------- waw --------------------------------- */
+
+.waw {
+	padding: clamp(6.25rem, 3.977rem + 11.36vw, 12.5rem) 0;
+
+	background: linear-gradient(270deg, rgb(49, 82, 91) 0%, rgb(249, 143, 65) 100%);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+	align-items: left;
+	img{
+		border-radius: 20px;
+	}
+	&__container {
+		width: 100%;
+		display: flex;
+		text-shadow: 2px -1px 5px rgba(68, 37, 11, 0.8);
+		color: #d6f5edd8;
+		flex-direction: column;
+		align-items: start;
+		justify-content: left;
+		gap: 40px;
+	}
+
+	&__title {
+		width: 100%;
+		font-size: clamp(2.5rem, 1.773rem + 3.64vw, 4.5rem);
+		line-height: 1.2;
+		font-weight: 700;
+		text-align: left;
+
+		max-width: 1000px;
+		color: var(--primary-color);
+	}
+
+	&__text {
+		font-size: clamp(1.125rem, 1.011rem + 0.57vw, 1.438rem);
+		font-weight: 450;
+		line-height: 1.4;
+		text-align: left;
+	}
+
+	&__link {
+		width: 200px;
+		height: 50px;
+		border-radius: 25.675px;
+		background: var(--secondary-color);
+
+		color: var(--primary-color);
+		font-weight: 600;
+		font-size: 22px;
+
+		display: flex;
+		justify-content: left;
+		align-items: left;
+	}
+}
+
+.fic {
+	padding: clamp(6.25rem, 3.977rem + 11.36vw, 12.5rem) 0;
+
+	background: var(--tertiary-color);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: right;
+	align-items: right;
+	img{
+		border-radius: 20px;
+	}
+	&__container {
+		width: 100%;
+		display: flex;
+		text-shadow: 2px -1px 8px rgba(5, 41, 24, 0.8);
+		color: #e4d0c1;
+		flex-direction: column;
+		align-items: end;
+		justify-content: right;
+		gap: 40px;
+	}
+
+	&__title {
+		width: 100%;
+		font-size: clamp(2.5rem, 1.773rem + 3.64vw, 4.5rem);
+		line-height: 1.2;
+		font-weight: 700;
+		text-align: right;
+
+		max-width: 1000px;
+		color: var(--secondary-color);
+	}
+
+	&__text {
+		font-size: clamp(1.125rem, 1.011rem + 0.57vw, 1.438rem);
+		font-weight: 450;
+		line-height: 1.4;
+		text-align: right;
+	}
+
+	&__link {
+		width: 200px;
+		height: 50px;
+		border-radius: 25.675px;
+		background: var(--secondary-color);
+
+		color: var(--primary-color);
+		font-weight: 600;
+		font-size: 22px;
+
+		display: flex;
+		justify-content: right;
+		align-items: right;
+	}
+}
