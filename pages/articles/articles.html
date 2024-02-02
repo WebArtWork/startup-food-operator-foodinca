@@ -1,0 +1,133 @@
+<script type="module">
+	import Article from '/api/wjst/article';
+	import Dom from '/api/wjst/dom';
+	Article.perPage = 10;
+	let page = 1;
+
+	if ((await Article.page(1)).length < Article.perPage) {
+		Dom.remove('loadArticles');
+	}
+
+	document.getElementById('loadArticles').addEventListener('click', async () => {
+		page++;
+		const articles = await Article.page(page);
+
+		if (articles.length < Article.perPage) {
+			Dom.remove('loadArticles');
+		}
+		for (const article of articles) {
+			if (!article.thumbs) {
+				article.thumbs = [];
+			}
+			Dom.add('articles', Dom.template('article', {
+				thumb: article.thumb,
+				thumbs: article.thumbs.map(thumb => {
+					return Dom.template('article_thumb', {
+						name: article.name,
+						thumb
+					})
+				}),
+				name: article.name,
+				_id: article._id,
+				short: article.short,
+                description: article.description
+			}));
+		}
+	});
+</script>
+
+
+<section class="articles-page">
+    <div class="articles-page__container">
+        <div class="article-page__article main-article">
+            <a href="/article/{{{article.url || article.id}}}">
+                <div class="main-article__img">
+                    <img src="{{{article.thumb}}}" alt="{{{article.name}}}" />
+                </div>
+            </a>
+
+            <a href="/article/{{{article.url || article.id}}}">
+                <h1 class="main-article__title">{{{article.name}}}</h1>
+            </a>
+        </div>
+
+        <p class="articles-page__text">
+            {{{translate("Template.Here you will findul useful information and news that helps you develop your busuness and attract customers")}}}
+        </p>
+
+        <div class="articles-page__content">
+            <div class="articles-page__wrapper" id="articles">
+                {% for article in articles %}
+                <div class="articles-page__card articles-page-card">
+                    <a href="/article/{{{article.url || article.id}}}">
+                        <div class="articles-page-card__img">
+                            <img src="{{{article.thumb}}}" alt="{{{article.name}}}" />
+                        </div>
+                    </a>
+                    <div class="articles-page-card__text">
+                        <span class="articles-page-card__title">
+                            <a href="/article/{{{article.url || article.id}}}">{{{article.name}}}</a></span>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <br />
+            <button class="load-more" id="loadArticles" style="background-color: rgb(255, 153, 0); padding: 20px; border-radius: 10px; color:white; font-weight: 600; margin: 0 auto; display: block; border-color: rgb(255, 153, 0);">Load more</button>
+            <aside class="articles-page__sidebar">
+                <form action="#" class="search-bar">
+                    <input type="search" class="search-bar__input" id="footer-input" placeholder="Find article"
+                        required />
+                    <button type="submit" class="search-bar__button">
+                        <svg viewBox="0 0 32 32" height="20" width="20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink"
+                            xmlns:sketch="http://www.bohemiancoding.com/sketch/ns" fill="#000000">
+
+                            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"
+                                sketch:type="MSPage">
+                                <g id="Icon-Set" sketch:type="MSLayerGroup"
+                                    transform="translate(-256.000000, -1139.000000)" fill="#000000">
+                                    <path
+                                        d="M269.46,1163.45 C263.17,1163.45 258.071,1158.44 258.071,1152.25 C258.071,1146.06 263.17,1141.04 269.46,1141.04 C275.75,1141.04 280.85,1146.06 280.85,1152.25 C280.85,1158.44 275.75,1163.45 269.46,1163.45 L269.46,1163.45 Z M287.688,1169.25 L279.429,1161.12 C281.591,1158.77 282.92,1155.67 282.92,1152.25 C282.92,1144.93 276.894,1139 269.46,1139 C262.026,1139 256,1144.93 256,1152.25 C256,1159.56 262.026,1165.49 269.46,1165.49 C272.672,1165.49 275.618,1164.38 277.932,1162.53 L286.224,1170.69 C286.629,1171.09 287.284,1171.09 287.688,1170.69 C288.093,1170.3 288.093,1169.65 287.688,1169.25 L287.688,1169.25 Z"
+                                        id="search" sketch:type="MSShapeGroup"> </path>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </form>
+
+                <div class="cta-block">
+                    <h2 class="cta-block__title">
+                        {{{translate("Template.Upgrade your business with Wawify")}}}
+                    </h2>
+
+                    <p class="cta-block__text">
+                        {{{translate("Template.Try on a website template that you like for your store")}}}
+                    </p>
+
+                    <a href="/manage/profile" class="cta-block__link">{{{translate("Template.Try on")}}}</a>
+                </div>
+        </div>
+        </aside>
+
+
+    </div>
+</section>
+
+<section class="line">
+    <a href="#" class="infinite-line"></a>
+</section>
+
+
+<div id="template-article" style="display: none;"> 
+    <div class="articles-page__card articles-page-card">
+        <a href="/article/{_id}">
+            <div class="articles-page-card__img">
+                <img src="{thumb}" alt="{name}" />
+            </div>
+        </a>
+        <div class="articles-page-card__text">
+            <span class="articles-page-card__title">
+                <a href="/article/{_id}">{name}</a></span>
+        </div>
+    </div>
+</div>

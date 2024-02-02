@@ -1,0 +1,34 @@
+<section class="themes-hero">
+	<div class="themes-hero__container">
+		<div class="themes-hero__main">
+			<h1 class="themes-hero__title">
+				Choose and try a theme for your online menu for free
+			</h1>
+			<div class="themes-hero__img">
+				<img src="/template/img/theme.jpg" alt="" />
+			</div>
+		</div>
+
+		<a href="/manage/profile" class="themes-hero__link">Authorization</a>
+	</div>
+</section>
+
+<section class="themes-wrapper">
+	<div class="themes-wrapper__container">
+		{% for theme in themes %}
+
+		<div class="themes-wrapper__card themes-card">
+			<a href="https://{{{theme.name}}}.foodin.ca" class="themes-card__img">
+				<img src="{{{theme.thumb}}}" alt="{{{theme.name}}}" />
+			</a>
+			<div class="themes-card__text">
+				<span class="themes-card__title">{{{theme.name}}}</span>
+				<a href="https://{{{theme.name}}}.foodin.ca" class="themes-card__link">View demo</a>
+			</div>
+		</div>
+
+		{% endfor %}
+
+		<!-- {{{theme.description|safe}}} -->
+	</div>
+</section>

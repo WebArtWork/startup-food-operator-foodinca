@@ -1,0 +1,124 @@
+<script type="module">
+	import Product from '/api/wjst/product';
+	import Dom from '/api/wjst/dom';
+	Product.perPage = 10;
+	let page = 1;
+
+	if ((await Product.page(1)).length < Product.perPage) {
+		Dom.remove('loadProducts');
+	}
+
+	document.getElementById('loadProducts').addEventListener('click', async () => {
+		page++;
+		const products = await Product.page(page);
+
+		if (products.length < Product.perPage) {
+			Dom.remove('loadProducts');
+		}
+		for (const product of products) {
+			if (!product.thumbs) {
+				product.thumbs = [];
+			}
+			Dom.add('products', Dom.template('product', {
+				thumb: product.thumb,
+				thumbs: product.thumbs.map(thumb => {
+					return Dom.template('product_thumb', {
+						name: product.name,
+						thumb
+					})
+				}),
+				name: product.name,
+				_id: product._id,
+				short: product.short,
+                description: product.description
+			}));
+		}
+	});
+</script>
+
+<section class="products-page">
+    <div class="products-page__container">
+        <h1 class="products-page__title title">Products</h1>
+
+        <div class="products-page__wrapper" id="products">
+            {% for product in products %}
+            <div class="products-page__card products-page-card">
+                <div id="product{{{product.id}}}" class="products-page-card__heart">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M2 9.1371C2 14 6.01943 16.5914 8.96173 18.9109C10 19.7294 11 20.5 12 20.5C13 20.5 14 19.7294 15.0383 18.9109C17.9806 16.5914 22 14 22 9.1371C22 4.27416 16.4998 0.825464 12 5.50063C7.50016 0.825464 2 4.27416 2 9.1371Z"
+                                fill="#ff852b"></path>
+                        </g>
+                    </svg>
+                </div>
+
+                <script>
+                    document
+                        .getElementById("product{{{product.id}}}")
+                        .addEventListener("click", () => {
+                            document
+                                .getElementById("product{{{product.id}}}")
+                                .classList.toggle(
+                                    "products-page-card__heart_active"
+                                );
+                        });
+                </script>
+
+                <div class="products-page-card__img">
+                    <a href="/product/{{{product.url || product.id}}}">
+                        <img src="{{{product.thumb}}}" alt="{{{product.name}}}" class="products-page-card__img" />
+                    </a>
+                </div>
+
+                <div class="products-page-card__text">
+                    <a href="/product/{{{product.url || product.id}}}" class="products-page-card__name">{{{product.name}}}</a>
+                    <span class="products-page-card__price">{{{product.price}}}</span>
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>
+        <button class="load-more" id="loadProducts"style="background-color: rgb(255, 153, 0); padding: 10px; border-radius: 10px; color:white; font-weight: 600; margin: 0 auto; display: block; border-color: rgb(255, 153, 0);">Load more</button>
+    </div>
+</section>
+<div id="template-product" style="display: none;"> 
+    <div class="products-page__card products-page-card">
+        <div id="product{_id}" class="products-page-card__heart">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <path
+                        d="M2 9.1371C2 14 6.01943 16.5914 8.96173 18.9109C10 19.7294 11 20.5 12 20.5C13 20.5 14 19.7294 15.0383 18.9109C17.9806 16.5914 22 14 22 9.1371C22 4.27416 16.4998 0.825464 12 5.50063C7.50016 0.825464 2 4.27416 2 9.1371Z"
+                        fill="#ff852b"></path>
+                </g>
+            </svg>
+        </div>
+
+        <script>
+            document
+                .getElementById("product{_id}")
+                .addEventListener("click", () => {
+                    document
+                        .getElementById("product{_id}")
+                        .classList.toggle(
+                            "products-page-card__heart_active"
+                        );
+                });
+        </script>
+
+        <div class="products-page-card__img">
+            <a href="/product/{_id}">
+                <img src="{thumb}" alt="{name}" class="products-page-card__img" />
+            </a>
+        </div>
+
+        <div class="products-page-card__text">
+            <a href="/product/{_id}" class="products-page-card__name">{name}</a>
+            <span class="products-page-card__price">{price}</span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+.back {
+	width: 100vw;
+	padding: 20px 0;
+	background: var(--primary-linear-gradient);
+
+	color: var(--secondary-color);
+	font-family: "Lato", sans-serif;
+	font-size: 20px;
+	font-weight: 600;
+
+	position: fixed;
+	top: 75px;
+	right: 0;
+
+	z-index: 40;
+
+	a {
+		color: inherit;
+
+		display: flex;
+		align-items: center;
+		gap: 5px;
+
+		width: 75px;
+
+		cursor: pointer;
+	}
+}

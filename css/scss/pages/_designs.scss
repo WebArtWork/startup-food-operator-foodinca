@@ -1,0 +1,237 @@
+.designs-hero {
+	padding-top: 200px;
+	padding-bottom: 130px;
+
+	background: var(--primary-linear-gradient);
+
+	&__container {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 40px;
+	}
+
+	&__main {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+	}
+
+	&__title {
+		font-size: clamp(2.5rem, 1.773rem + 3.64vw, 4.5rem);
+		line-height: 1;
+		font-weight: 700;
+		color: var(--primary-color);
+	}
+
+	&__text {
+		font-family: "Lato", sans-serif;
+		font-size: 32px;
+		font-weight: 400;
+		color: var(--secondary-color);
+	}
+
+	&__link {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 20px;
+		background: var(--primary-color);
+		width: 200px;
+		height: 45px;
+
+		color: var(--secondary-color);
+		font-size: 20px;
+		font-weight: 600;
+	}
+
+	&__img {
+		max-height: 500px;
+		max-width: 700px;
+
+		aspect-ratio: 5 / 3;
+
+		@media (max-width: 992px) {
+			display: none;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+
+			object-fit: cover;
+
+			border-radius: 20px;
+		}
+	}
+}
+
+.designs {
+	background: var(--secondary-color);
+	padding: clamp(6.25rem, 5.114rem + 5.68vw, 9.375rem) 0;
+
+	border-bottom: 3px solid #434343;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		gap: 80px;
+	}
+
+	&__title.title {
+		color: var(--primary-color);
+	}
+
+	&__text {
+		width: 100%;
+		text-align: center;
+		padding: 40px 0;
+		border-top: 1px solid var(--tertiary-color);
+		border-bottom: 1px solid var(--tertiary-color);
+		position: relative;
+
+		color: var(--primary-color);
+		font-size: 25px;
+
+		font-weight: 500;
+		font-family: "Lato", sans-serif;
+
+		&::before {
+			content: "";
+			height: calc(100% + 2px);
+			width: 100vw;
+			border-top: 1px solid var(--tertiary-color);
+			border-bottom: 1px solid var(--tertiary-color);
+			position: absolute;
+			top: -1px;
+			left: 0;
+			transform: translateX(-100%);
+		}
+
+		&::after {
+			content: "";
+			height: calc(100% + 2px);
+			width: 100vw;
+			border-top: 1px solid var(--tertiary-color);
+			border-bottom: 1px solid var(--tertiary-color);
+			position: absolute;
+			top: -1px;
+			right: 0;
+			transform: translateX(100%);
+		}
+	}
+
+	&__wrapper {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, 300px);
+		justify-content: center;
+		gap: 40px;
+
+		@media (max-width: 620px) {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 20px;
+		}
+	}
+}
+
+.designs-card {
+	width: 100%;
+
+	color: var(--secondary-color);
+
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+
+	position: relative;
+
+	&__heart {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+
+		z-index: 10;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		width: clamp(1.875rem, 1.648rem + 1.14vw, 2.5rem);
+		height: clamp(1.875rem, 1.648rem + 1.14vw, 2.5rem);
+		background-color: rgba($color: #777, $alpha: 0.8);
+
+		border-radius: 10px;
+
+		cursor: pointer;
+
+		@media (max-width: 575px) {
+			top: 7px;
+			right: 7px;
+		}
+
+		svg {
+			width: clamp(1.438rem, 1.278rem + 0.8vw, 1.875rem);
+			height: clamp(1.438rem, 1.278rem + 0.8vw, 1.875rem);
+		}
+
+		svg g path {
+			fill: transparent;
+			stroke: var(--tertiary-color);
+		}
+
+		&_active {
+			svg g path {
+				fill: var(--tertiary-color);
+				stroke: var(--tertiary-color);
+			}
+		}
+	}
+
+	&__img {
+		width: 100%;
+		aspect-ratio: 2 / 3;
+
+		position: relative;
+
+		img {
+			height: 100%;
+			width: 100%;
+
+			object-fit: cover;
+		}
+	}
+
+	&__text {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		text-align: center;
+
+		margin-top: 10px;
+	}
+
+	&__name {
+		color: var(--primary-color);
+		font-size: clamp(1.125rem, 1.011rem + 0.57vw, 1.438rem);
+		font-weight: 400;
+		line-height: 1.2;
+	}
+
+	&__author {
+		font-family: "Lato", sans-serif;
+		color: var(--tertiary-color);
+		font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+		font-weight: 400;
+
+		a {
+			color: inherit;
+			text-decoration: underline;
+		}
+	}
+}

@@ -1,0 +1,35 @@
+{
+	"name": "themes",
+	"themes": [
+		{
+			"thumb": "/template/img/themes/theme-1.jpg",
+			"name": "Gourmet Delights",
+			"description": " Create an online presence as delectable as your cuisine with our Gourmet Delights web template."
+		},
+		{
+			"thumb": "/template/img/themes/theme-2.jpg",
+			"name": "Cafe Bistro Elegance",
+			"description": "Elevate your café or bistro's online presence with the Cafe Bistro Elegance web template."
+		},
+		{
+			"thumb": "/template/img/themes/theme-3.jpg",
+			"name": "Food Truck Fiesta",
+			"description": "Take your food truck's online presence to the next level with Food Truck Fiesta. "
+		},
+		{
+			"thumb": "/template/img/themes/theme-4.jpg",
+			"name": "Fine Dining Excellence",
+			"description": "Make a lasting impression with the Fine Dining Excellence web template. "
+		},
+		{
+			"thumb": "/template/img/themes/theme-5.jpg",
+			"name": "Culinary Creations Academy",
+			"description": "Launch your culinary school or cooking courses with the Culinary Creations Academy web template."
+		},
+		{
+			"thumb": "/template/img/themes/theme-6.jpg",
+			"name": "Home Chef's Hub",
+			"description": "Empower aspiring home chefs with the Home Chef's Hub web template."
+		}
+	]
+}

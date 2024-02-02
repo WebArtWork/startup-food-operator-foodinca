@@ -1,0 +1,143 @@
+{
+	"title": "Welcome to waw Template",
+	"description": "description",
+	"keywords": "keywords",
+	"prefix": "/template",
+	"picture": "/template/img/meta.svg",
+	"author": "author",
+	"variables": {
+		"primary_color": "white"
+	},
+	"moderators": [],
+	"scss": "scss/index.scss",
+	"footer": {
+		"groups": [
+			{
+				"name": "Group Name",
+				"categories": [
+					{
+						"name": "Category Name",
+						"tags": [
+							{
+								"name": "Tag Name"
+							}
+						]
+					}
+				]
+			}
+		],
+		"products": [
+			{
+				"id": "/product",
+				"price": 1200,
+				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"name": "product"
+			},
+			{
+				"id": "/product",
+				"price": 1200,
+				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"name": "product"
+			},
+			{
+				"id": "/product",
+				"price": 1200,
+				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"name": "product"
+			}
+		],
+		"articles": [
+			{
+				"id": "/article",
+				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"name": "article"
+			},
+			{
+				"id": "/article",
+				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"name": "article"
+			},
+			{
+				"id": "/article",
+				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"name": "article"
+			}
+		],
+		"themes": [
+			{
+				"id": "/theme",
+				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"name": "theme"
+			},
+			{
+				"id": "/theme",
+				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"name": "theme"
+			},
+			{
+				"id": "/theme",
+				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"name": "theme"
+			}
+		],
+		"stores": [
+			{
+				"id": "/store",
+				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"name": "store"
+			},
+			{
+				"id": "/store",
+				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"name": "store"
+			},
+			{
+				"id": "/store",
+				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"name": "store"
+			}
+		],
+		"designs": [
+			{
+				"id": "/design",
+				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"name": "design"
+			},
+			{
+				"id": "/design",
+				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"name": "design"
+			},
+			{
+				"id": "/design",
+				"short": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.",
+				"thumb": "https://neryxomka.com/template/img/welcome.png",
+				"name": "design"
+			}
+		]
+	},
+		"categories": [
+		{
+			"name": "Category Name",
+			"tags": [
+				{
+					"name": "Tag Name"
+				}
+			]
+		}
+	]
+}

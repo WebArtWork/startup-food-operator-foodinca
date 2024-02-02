@@ -1,0 +1,108 @@
+.topbar {
+    background: none;
+    box-shadow: none;
+    @media (max-width:1600px) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    &__container {
+        background: white;
+        border-radius: 37px;
+        padding: 14px 15px 14px 32px;
+        box-shadow: 0 0 20px rgb(0 0 0 / 12%);
+    }
+    &__button {
+        position: relative;
+        top: 0;
+        right: 15px;
+    }
+    &__content {
+        @media (max-width:991px) {
+            transform: translate(-15px, 8px);
+            border-radius: 40px;
+            height: auto;
+            max-height: calc(100% - 20px);
+            box-shadow: 0px 20px 40px rgb(0 0 0 / 23%);
+        }
+        @media (max-width: 420px) {
+            width: calc(100% - 30px);
+        }
+    }
+}
+
+.topbar__logo {
+    width: 150px;
+    position: relative;
+    .eye {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        position: absolute;
+        top: 4px;
+        left: 34px;
+        &:nth-child(2) {left: 75px;}
+        &:before {
+        content: '';
+        position: absolute;
+        bottom: 14px;
+        right: 8px;
+        width: 20px;
+        height: 20px;
+        background: white;
+        border-radius: 50%;
+        }
+    }
+}
+
+.hero {
+    background: white;
+    &::before {
+        z-index: 0;
+        filter: hue-rotate(-80deg);
+        opacity: 0.4;
+    }
+    &__img {
+        top: -13%;
+    }
+}
+
+.themes__find-more {
+    margin: 60px auto 0 auto;
+}
+
+.themes-card {
+    &__text {
+        background: white;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        margin-top: 0;
+        padding: 20px;
+        transition: 200ms;
+    }
+    &:hover .themes-card__text{
+        background: #ff9900;
+    }
+    &__img {
+        overflow: hidden;
+        img {height: auto;}
+    }
+    &__link {
+        text-decoration: none !important;
+        background: #ff9900;
+        padding: 10px 20px;
+        border-radius: 10px;
+        transition: 150ms;
+    }
+    &:hover .themes-card__link {background: white;}
+}
+
+.themes-slide__subtitle {
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.cta {
+    background: url(/template/img/cta-bg.jpg);
+}

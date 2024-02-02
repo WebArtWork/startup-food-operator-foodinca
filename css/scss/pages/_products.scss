@@ -1,0 +1,115 @@
+.products-page {
+	@include page-padding;
+
+	background-color: var(--primary-color);
+
+	color: var(--secondary-color);
+
+	&__wrapper {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, 300px);
+		justify-content: center;
+		gap: 40px;
+
+		margin-top: 40px;
+
+		@media (max-width: 620px) {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 20px;
+		}
+	}
+}
+.products-page-card {
+	width: 100%;
+
+	color: var(--secondary-color);
+
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+
+	position: relative;
+
+	&__heart {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+
+		z-index: 10;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		width: clamp(1.875rem, 1.648rem + 1.14vw, 2.5rem);
+		height: clamp(1.875rem, 1.648rem + 1.14vw, 2.5rem);
+		background-color: rgba($color: #777, $alpha: 0.8);
+
+		border-radius: 10px;
+
+		cursor: pointer;
+
+		@media (max-width: 575px) {
+			top: 7px;
+			right: 7px;
+		}
+
+		svg {
+			width: clamp(1.438rem, 1.278rem + 0.8vw, 1.875rem);
+			height: clamp(1.438rem, 1.278rem + 0.8vw, 1.875rem);
+		}
+
+		svg g path {
+			fill: transparent;
+			stroke: var(--primary-color);
+		}
+
+		&_active {
+			svg g path {
+				fill: var(--tertiary-color);
+				stroke: var(--tertiary-color);
+			}
+		}
+	}
+
+	&__img {
+		width: 100%;
+		aspect-ratio: 2 / 3;
+
+		position: relative;
+
+		img {
+			height: 100%;
+			width: 100%;
+
+			object-fit: cover;
+		}
+	}
+
+	&__text {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		text-align: center;
+
+		margin-top: 10px;
+	}
+
+	&__name {
+		color: inherit;
+		font-size: clamp(1.125rem, 1.011rem + 0.57vw, 1.438rem);
+		font-weight: 400;
+		line-height: 1.2;
+	}
+
+	&__price {
+		font-family: "Lato", sans-serif;
+		color: #777;
+		font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+	}
+}

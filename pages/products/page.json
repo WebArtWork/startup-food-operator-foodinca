@@ -1,0 +1,64 @@
+{
+    "title": "Page Title",
+    "products": [
+        {
+            "id": "1",
+            "name": "Name",
+            "short": "Short",
+            "price": 123,
+            "thumb": "https://neryxomka.com/template/img/welcome.png"
+        },
+        {
+            "id": "2",
+            "name": "Name",
+            "short": "Short",
+            "price": 123,
+            "thumb": "https://cdn.shopify.com/s/files/1/0070/7032/files/international_20commerce.png?format=webp&v=1689722665&width=1024"
+        },
+        {
+            "id": "3",
+            "name": "Name",
+            "short": "Short",
+            "price": 123,
+            "thumb": "https://wawify.com/api/file/get/general/1687782153721.png?1687782153725"
+        },
+        {
+            "id": "4",
+            "name": "Name",
+            "short": "Short",
+            "price": 123,
+            "thumb": "https://neryxomka.com/template/img/welcome.png"
+        },
+        {
+            "id": "5",
+            "name": "Name",
+            "short": "Short",
+            "price": 123,
+            "thumb": "https://neryxomka.com/template/img/welcome.png"
+        },
+        {
+            "id": "6",
+            "name": "Name",
+            "short": "Short",
+            "price": 123,
+            "thumb": "https://neryxomka.com/template/img/welcome.png"
+        },
+        {
+            "id": "7",
+            "name": "Name",
+            "short": "Short",
+            "price": 123,
+            "thumb": "https://neryxomka.com/template/img/welcome.png"
+        }
+    ],
+    "categories": [
+		{
+			"name": "Category Name",
+			"tags": [
+				{
+					"name": "Tag Name"
+				}
+			]
+		}
+	]
+}

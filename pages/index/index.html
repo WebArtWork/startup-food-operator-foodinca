@@ -1,0 +1,220 @@
+<section class="hero">
+	<!-- 	
+	<video autoplay muted loop class="hero__bgvideo">
+		<source src="/template/img/hero-bg1.mp4" type="video/mp4" />
+	</video>
+	-->
+	<div class="hero__container">
+		<div class="hero__main">
+			<h1 class="hero__title">
+				{{{translate("Template.The perfect online menu for your business is already prepared")}}}
+			</h1>
+		</div>
+
+		<a href="https://instagram.com/wawify">
+			<div class="hero__img">
+			</div>
+		</a>
+	</div>
+</section>
+
+<section class="features">
+	<div class="features__container">
+		<div class="features__item features-item">
+			<div class="features-item__icon">
+				<img src="/template/img/icons/feautures/templates.svg" alt="Templates" />
+			</div>
+			<div class="features-item__text">
+				<h3 class="features-item__subtitle">{{{translate("Template.Menu themes")}}}</h3>
+				<p class="features-item__desc">
+					{{{translate("Template.Themes for your websites that can quickly and easily transform into your online menu")}}}
+				</p>
+			</div>
+		</div>
+		<div class="features__item features-item">
+			<div class="features-item__icon">
+				<img src="/template/img/icons/feautures/buying.svg" alt="Buying" />
+			</div>
+			<div class="features-item__text">
+				<h3 class="features-item__subtitle">{{{translate("Template.Buying")}}}</h3>
+				<p class="features-item__desc">
+					{{{translate("Template.Our platform offers a convenient business support, which will increase joy of your clients")}}}
+				</p>
+			</div>
+		</div>
+		
+		<!-- 
+		<div class="features__item features-item">
+			<div class="features-item__icon">
+				<img src="/template/img/icons/feautures/designs.svg" alt="Your designs" />
+			</div>
+			<div class="features-item__text">
+				<h3 class="features-item__subtitle">{{{translate("Template.Your designs")}}}</h3>
+				<p class="features-item__desc">
+					{{{translate("Template.We provide the opportunity to upload your unique models to our platform and sell your creations at your own prices")}}}
+				</p>
+			</div>
+		</div>
+		-->
+
+		<div class="features__item features-item">
+			<div class="features-item__icon">
+				<img src="/template/img/icons/feautures/safety.svg" alt="Safety" />
+			</div>
+			<div class="features-item__text">
+				<h3 class="features-item__subtitle">{{{translate("Template.Safety and Reliability")}}}</h3>
+				<p class="features-item__desc">
+					{{{translate("Template.We prioritize the security of your client payment. Our platform utilizes advanced encryption technologies to protect user information")}}}
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="waw">
+	<div class="waw__container">
+		<img src="/template/img/qr-menu.jpg">
+		<p class="waw__text">
+			{{{translate("Template.Don't need to download the app.<br /> Using the QR code, an online page is loaded where you can view the menu.")}}}
+		</p>
+	</div>
+
+	<div class="fic__container">
+		<img src="/template/img/open.jpg">
+		<p class="fic__text">
+			{{{translate("Template.Personalized menu for convenience and efficiency. <br /> Quick changes in assortment, price updates, secure usage<br />  contributing to productivity and savings.")}}}
+		</p>
+	</div>
+
+	<div class="waw__container">
+		<img src="/template/img/qr-menu.jpg">
+		<p class="waw__text">
+			{{{translate("Template.Save on developing your own website!<br /> Get Waiter at an advantageous price and enjoy seamless operations.")}}}
+		</p>
+	</div>
+
+	<div class="fic__container">
+		<img src="/template/img/open.jpg">
+		<p class="fic__text">
+			{{{translate("Template.Contactless payment.No need to wait for the waiter with the bill.<br />  Payment is made instantly with Waiter!")}}}
+		</p>
+	</div>
+
+	<div class="waw__container">
+		<img src="/template/img/qr-menu.jpg">
+		<p class="waw__text">
+			{{{translate("Template.Increased sales and profits. <br /> Convenient arrangement of all items to attract customers:<br />  photos, prices, ingredients, recommendations.<br />  Orders increase thanks to visualization.")}}}
+		</p>
+	</div>
+
+	<div class="fic__container">
+		<img src="/template/img/open.jpg">
+		<p class="fic__text">
+			{{{translate("Template.Call the waiter.<br /> No need to wait for the waiter to appear. <br /> With our app, you will be heard from any corner of the establishment.")}}}
+		</p>
+	</div>
+</section>
+
+
+<section class="themes">
+	<div class="themes__container">
+		<div class="themes__header">
+			<h2 class="themes__title title">{{{translate("Template.Themes")}}}</h2>
+		</div>
+		<p class="themes__text">
+			{{{translate("Template.Choose a theme that will give your menu a clean and modern look, allowing your products to appear more appealing and capture customers' attention")}}}
+		</p>
+
+		<div class="themes__slider themes-slider swiper">
+			<div class="themes-slider__wrapper swiper-wrapper">
+				{% for theme in themes %}
+				<div class="themes-slider__slide themes-slide swiper-slide">
+					<a href="/theme/{{{theme.id}}}">
+						<img src="{{{theme.thumb}}}" alt="{{{theme.name}}}" />
+						<span class="themes-slide__subtitle">
+							{{{theme.name}}}
+						</span>
+					</a>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+		<a href="/themes" class="themes__find-more">{{{translate("Template.View all")}}}</a>
+	</div>
+</section>
+<!--
+<section class="products">
+	<div class="products__container">
+		<div class="products__header">
+			<h2 class="products__title title">{{{translate("Template.Products")}}}</h2>
+			<a href="https://wawify.com/products" class="products__find-more">{{{translate("Template.View all")}}}</a>
+
+		</div>
+		<p class="products__text">
+			{{{translate("Template.Take advantage of the opportunity to shop on our website, where you will find a wider selection and uniqueness thanks to convenient product filtering")}}}
+		</p>
+
+		<div class="products__slider products-slider swiper">
+			<div class="themes-slider__wrapper swiper-wrapper">
+				{% for product in products %}
+				<div class="products-slider__slide products-slide swiper-slide">
+					<a href="/product/{{{product.id}}}">
+						<img src="{{{product.thumb}}}" alt="{{{product.name}}}" />
+						<span class="products-slide__subtitle">
+							{{{product.name}}}
+						</span>
+					</a>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="articles">
+	<div class="articles__container">
+		<h2 class="articles__title title">{{{translate("Template.Blog")}}}</h2>
+		<div class="articles__article article-card">
+			<div class="article-card__img">
+				<img src="{{{article.thumb}}}" alt="{{{article.name}}}" />
+			</div>
+			<div class="article-card__text">
+				<span class="article-card__title">{{{article.name}}}</span>
+				<p class="article-card__desc">{{{article.description}}}</p>
+			</div>
+			<a href="/article" class="article-card__link">{{{translate("Template.Read more")}}}</a>
+		</div>
+
+		<h3 class="articles__subtitle">{{{translate("Template.Recommended articles")}}}</h3>
+		<div class="articles__slider articles-slider swiper">
+			<div class="articles-slider__wrapper swiper-wrapper">
+				
+				{% for article in articles %}
+				<a href="/article/{{{article.id}}}" class="articles-slider__slide articles-slide swiper-slide">
+					<div class="articles-slide__img">
+						<img src="{{{article.thumb}}}" alt="{{{article.name}}}" />
+					</div>
+					<span class="articles-slide__title">{{{article.name}}}</span>
+				</a>
+				{% endfor %}
+			</div>
+		</div>
+
+		<a href="https://wawify.com/articles" class="articles__link">{{{translate("Template.View all articles")}}}</a>
+	</div>
+</section>
+ -->
+
+<section class="cta">
+	<div class="cta__container">
+		<h2 class="cta__title">
+			{{{translate("Template.Upgrade your business with Food In Canada")}}}
+		</h2>
+
+		<p class="cta__text">
+			{{{translate("Template.Try on a website theme that you like for your online menu")}}}
+		</p>
+
+		<a href="/manage/profile" class="cta__link">{{{translate("Template.Try on")}}}</a>
+	</div>
+</section>

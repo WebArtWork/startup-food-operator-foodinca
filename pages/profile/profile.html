@@ -1,0 +1,94 @@
+<!-- <h1>{{{user.name}}}</h1>
+<img src="{{{user.thumb}}}" alt="{{{user.name}}}">
+<p>{{{user.data.bio}}}</p> -->
+
+<section class="profile">
+    <div class="profile__container">
+        <div class="back">
+            <div class="back__container">
+                <a onclick="javascript:history.back(); return false;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="22.6484" height="22.6484" transform="matrix(-1 0 0 1 23.4785 0.360352)"
+                            fill="url(#pattern0)" />
+                        <defs>
+                            <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0_564_849" transform="scale(0.00195312)" />
+                            </pattern>
+                            <image id="image0_564_849" width="512" height="512"
+                                xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAOiklEQVR4nO3Zva0laRWF4c1pExfCIBUsIkCIhDBBPb/5TBBgkQMD1oza2Fp09z33VNWq55G2/3nvKtWHgdd6zMzfZ+Z3M/PTwW8BAF7gMTMfZ+a/M/PzzPz52OcAAO/t0/j/ckYAABTb4m8EAECxFH8jAAAKfU78jQAAKPIl8TcCAKDA18TfCACAC3tL/I0AALigx8x8M2+LvxEAABfyzPgbAQBwAe8RfyMAAE7sPeNvBADACb0i/kYAAJzIK+NvBADACRwRfyMAAA50ZPyNAAA4wGNmvp1j428EAMALnSn+RgAAvMAZ428EAMA7OnP8jQAAeAdXiL8RAABPdKX4GwEA8ARXjL8RAABvcOX4GwEA8BUa4m8EAMAXeMzMd3N8uI0AAHiRxvgbAQAQNMffCACAxR3ibwQAwCfuFH8jAADmnvE3AgC4tTvH3wgA4JbE3wgA4GbE3wgA4GYeM/P9HB/cM54RAEAl8TcCALgZ8TcCALgZ8TcCALgZ8TcCALgZ8TcCALgZ8TcCALgZ8TcCALiZx8z8MMcHs/GMAABOSfyNAABuRvyNAABuRvyNAABuRvyNAABuRvyPPyMAgJcS//OcEQDAS4j/+c4IAOBdif95zwgA4F08ZubHOT50zggA4EU+jPhf5YwAAJ5C/K93RgAAbyL+1z0jAICvIv7XPyMAgC8i/j1nBADwWcS/74wAAP6vv83xwXLPv/+MEQCc0IejH8Cv/jUzf5qZ3x79EJ7qNzPzx5n558z8dPBbADipP8zMv+f4r1b3/PM7AIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0jAIDICOg9IwCAyAjoPSMAgMgI6D0j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" />
+                        </defs>
+                    </svg>
+                    Back
+                </a>
+            </div>
+        </div>
+        <div class="profile__main">
+            <div class="profile__img">
+                <img src="{{{user.thumb}}}" alt="{{{user.name}}}" />
+            </div>
+            <div class="profile__text">
+                <h1 class="profile__title">{{{user.name}}}</h1>
+                <p class="profile__desc">{{{user.data.bio}}}</p>
+            </div>
+        </div>
+
+        <div class="profile__contacts profile-contacts">
+            <h2 class="profile-contacts__title">Contacts</h2>
+
+            <div class="profile-contacts__wrapper">
+                <a href="#" class="profile-contacts__link"><svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.5 5.60938C8.5 5.60938 6.10938 8.04688 6.10938 11C6.10938 14 8.5 16.3906 11.5 16.3906C14.4531 16.3906 16.8906 14 16.8906 11C16.8906 8.04688 14.4531 5.60938 11.5 5.60938ZM11.5 14.5156C9.57812 14.5156 7.98438 12.9688 7.98438 11C7.98438 9.07812 9.53125 7.53125 11.5 7.53125C13.4219 7.53125 14.9688 9.07812 14.9688 11C14.9688 12.9688 13.4219 14.5156 11.5 14.5156ZM18.3438 5.42188C18.3438 4.71875 17.7812 4.15625 17.0781 4.15625C16.375 4.15625 15.8125 4.71875 15.8125 5.42188C15.8125 6.125 16.375 6.6875 17.0781 6.6875C17.7812 6.6875 18.3438 6.125 18.3438 5.42188ZM21.9062 6.6875C21.8125 5 21.4375 3.5 20.2188 2.28125C19 1.0625 17.5 0.6875 15.8125 0.59375C14.0781 0.5 8.875 0.5 7.14062 0.59375C5.45312 0.6875 4 1.0625 2.73438 2.28125C1.51562 3.5 1.14062 5 1.04688 6.6875C0.953125 8.42188 0.953125 13.625 1.04688 15.3594C1.14062 17.0469 1.51562 18.5 2.73438 19.7656C4 20.9844 5.45312 21.3594 7.14062 21.4531C8.875 21.5469 14.0781 21.5469 15.8125 21.4531C17.5 21.3594 19 20.9844 20.2188 19.7656C21.4375 18.5 21.8125 17.0469 21.9062 15.3594C22 13.625 22 8.42188 21.9062 6.6875ZM19.6562 17.1875C19.3281 18.125 18.5781 18.8281 17.6875 19.2031C16.2812 19.7656 13 19.625 11.5 19.625C9.95312 19.625 6.67188 19.7656 5.3125 19.2031C4.375 18.8281 3.67188 18.125 3.29688 17.1875C2.73438 15.8281 2.875 12.5469 2.875 11C2.875 9.5 2.73438 6.21875 3.29688 4.8125C3.67188 3.92188 4.375 3.21875 5.3125 2.84375C6.67188 2.28125 9.95312 2.42188 11.5 2.42188C13 2.42188 16.2812 2.28125 17.6875 2.84375C18.5781 3.17188 19.2812 3.92188 19.6562 4.8125C20.2188 6.21875 20.0781 9.5 20.0781 11C20.0781 12.5469 20.2188 15.8281 19.6562 17.1875Z"
+                            fill="#F5F5F5" />
+                    </svg>
+                    Instagram
+                </a>
+
+                <a href="" class="profile-contacts__link"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M23.625 12C23.625 5.57812 18.4219 0.375 12 0.375C5.57812 0.375 0.375 5.57812 0.375 12C0.375 17.8125 4.59375 22.6406 10.1719 23.4844V15.375H7.21875V12H10.1719V9.46875C10.1719 6.5625 11.9062 4.92188 14.5312 4.92188C15.8438 4.92188 17.1562 5.15625 17.1562 5.15625V8.01562H15.7031C14.25 8.01562 13.7812 8.90625 13.7812 9.84375V12H17.0156L16.5 15.375H13.7812V23.4844C19.3594 22.6406 23.625 17.8125 23.625 12Z"
+                            fill="#F5F5F5" />
+                    </svg>
+
+                    Facebook</a>
+                <a href="" class="profile-contacts__link"><svg width="24" height="20" viewBox="0 0 24 20" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M21.5156 5.125C22.4531 4.42188 23.2969 3.57812 23.9531 2.59375C23.1094 2.96875 22.125 3.25 21.1406 3.34375C22.1719 2.73438 22.9219 1.79688 23.2969 0.625C22.3594 1.1875 21.2812 1.60938 20.2031 1.84375C19.2656 0.859375 18 0.296875 16.5938 0.296875C13.875 0.296875 11.6719 2.5 11.6719 5.21875C11.6719 5.59375 11.7188 5.96875 11.8125 6.34375C7.73438 6.10938 4.07812 4.14062 1.64062 1.1875C1.21875 1.89062 0.984375 2.73438 0.984375 3.67188C0.984375 5.35938 1.82812 6.85938 3.1875 7.75C2.39062 7.70312 1.59375 7.51562 0.9375 7.14062V7.1875C0.9375 9.57812 2.625 11.5469 4.875 12.0156C4.5 12.1094 4.03125 12.2031 3.60938 12.2031C3.28125 12.2031 3 12.1562 2.67188 12.1094C3.28125 14.0781 5.10938 15.4844 7.26562 15.5312C5.57812 16.8438 3.46875 17.6406 1.17188 17.6406C0.75 17.6406 0.375 17.5938 0 17.5469C2.15625 18.9531 4.73438 19.75 7.54688 19.75C16.5938 19.75 21.5156 12.2969 21.5156 5.78125C21.5156 5.54688 21.5156 5.35938 21.5156 5.125Z"
+                            fill="#F5F5F5" />
+                    </svg>
+
+                    Twitter</a>
+                <a href="" class="profile-contacts__link">
+                    <svg width="26" height="26" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path
+                                d="M41.4193 7.30899C41.4193 7.30899 45.3046 5.79399 44.9808 9.47328C44.8729 10.9883 43.9016 16.2908 43.1461 22.0262L40.5559 39.0159C40.5559 39.0159 40.3401 41.5048 38.3974 41.9377C36.4547 42.3705 33.5408 40.4227 33.0011 39.9898C32.5694 39.6652 24.9068 34.7955 22.2086 32.4148C21.4531 31.7655 20.5897 30.4669 22.3165 28.9519L33.6487 18.1305C34.9438 16.8319 36.2389 13.8019 30.8426 17.4812L15.7331 27.7616C15.7331 27.7616 14.0063 28.8437 10.7686 27.8698L3.75342 25.7055C3.75342 25.7055 1.16321 24.0823 5.58815 22.459C16.3807 17.3729 29.6555 12.1786 41.4193 7.30899Z"
+                                fill="#f5f5f5"></path>
+                        </g>
+                    </svg>
+
+                    Telegram
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-partner">
+    <div class="cta-partner__container">
+        <span class="cta-partner__title">Become a Wawify partner</span>
+
+        <form action="#" class="cta-partner__form">
+            <input type="email" class="cta-partner__input" id="footer-input" placeholder="Enter Your email" required />
+            <button type="submit" class="cta-partner__button" id="footer-button">
+                Send
+            </button>
+        </form>
+    </div>
+</section>
