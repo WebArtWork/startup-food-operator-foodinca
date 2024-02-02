@@ -745,24 +745,25 @@
 .waw {
 	padding: clamp(6.25rem, 3.977rem + 11.36vw, 12.5rem) 0;
 
-	background: linear-gradient(270deg, rgb(49, 82, 91) 0%, rgb(249, 143, 65) 100%);
+	background: linear-gradient(340deg, rgb(49, 82, 91) 0%, rgb(249, 143, 65) 100%);
 
 	display: flex;
 	flex-direction: column;
 	justify-content: left;
 	align-items: left;
-	img{
-		border-radius: 20px;
-	}
 	&__container {
 		width: 100%;
 		display: flex;
-		text-shadow: 2px -1px 5px rgba(68, 37, 11, 0.8);
-		color: #d6f5edd8;
+		color: #ffffffd8;
 		flex-direction: column;
 		align-items: start;
 		justify-content: left;
 		gap: 40px;
+		padding: 20px;
+		img{
+			border-radius: 20%;
+			width: 350px;
+		}
 	}
 
 	&__title {
@@ -808,18 +809,18 @@
 	flex-direction: column;
 	justify-content: right;
 	align-items: right;
-	img{
-		border-radius: 20px;
-	}
 	&__container {
 		width: 100%;
 		display: flex;
-		text-shadow: 2px -1px 8px rgba(5, 41, 24, 0.8);
-		color: #e4d0c1;
+		color: #fcf0e6;
 		flex-direction: column;
 		align-items: end;
 		justify-content: right;
 		gap: 40px;
+		img{
+			border-radius: 20%;
+			width: 350px;
+		}
 	}
 
 	&__title {
