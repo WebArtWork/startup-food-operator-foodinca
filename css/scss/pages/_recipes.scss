@@ -1,0 +1,27 @@
+.recipes {
+	padding: clamp(8.563rem, 7.653rem + 4.55vw, 11.063rem) 0
+		clamp(3.75rem, 2.841rem + 4.55vw, 6.25rem) 0;
+
+
+	&__container {
+		max-width: 1270px;		
+	}
+
+    &__list{
+        display: grid;
+        justify-items: center;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.recipes-item{
+    max-width: 500px;
+
+    &__img-link{
+        img{
+            width: 500px;
+            max-height: 320px;
+            object-fit: cover; //???
+        }
+    }
+}
