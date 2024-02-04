@@ -1,87 +1,64 @@
 <section class="recipes">
   <div class="recipes__container">
     <h1 class="recipes__title">RECIPES</h1>
+
+    <div class="recipes-search">
+      <form>
+        <input type="text" placeholder="SEARCH FOR A RECIPE" />
+        <button type="submit">
+          <img
+            src="/template/img/recipes/recipes-icons/arrow-right.svg"
+            alt=""
+          />
+        </button>
+      </form>
+    </div>
+
     <div class="recipes__list">
+      {% for recipe in recipes %}
       <div class="recipes-item">
         <div class="recipes-item__favorites"></div>
         <div class="recipes-item__img">
           <a href="#" class="recipes-item__img-link">
-            <img src="/template/img/recipes/food-2.jpg" alt="" />
+            <img src="{{{recipe.thumb}}}" alt="" />
           </a>
         </div>
-        <div class="recipes-item__content">
-          <h3 class="recipes-item__title">Classic tiramisu in a glass</h3>
-          <div class="recipes-item__feature recipes-feature">
-            <div class="recipes-feature__time">
-              <div class="recipes-feature__time-img">
-                <img
-                  src="/template/img/recipes/recipes-icons/time.svg"
-                  alt=""
-                />
-              </div>
-              <div class="recipes-feature__time-text">1 h 30 min</div>
+
+        <h3 class="recipes-item__title">
+          <a href="#" class="recipes-item__title-link"> {{{recipe.name}}} </a>
+        </h3>
+
+        <div class="recipes-item__feature recipes-feature">
+          <div class="recipes-feature__time">
+            <div class="recipes-feature__time-img">
+              <img src="/template/img/recipes/recipes-icons/time.svg" alt="" />
             </div>
-            <div class="recipes-feature__serving">
-              <div class="recipes-feature__serving-img">
-                <img
-                  src="/template/img/recipes/recipes-icons/serving.svg"
-                  alt=""
-                />
-              </div>
-              <div class="recipes-feature__serving-text">4</div>
+            <div class="recipes-feature__time-text">
+              {{{recipe.cookingTime}}}
             </div>
-            <div class="recipes-feature__difficulty">
-              <div class="recipes-feature__difficulty-img">
-                <img
-                  src="/template/img/recipes/recipes-icons/star-light.svg"
-                  alt=""
-                />
-              </div>
-              <div class="recipes-feature__difficulty-text">light</div>
+          </div>
+          <div class="recipes-feature__serving">
+            <div class="recipes-feature__serving-img">
+              <img
+                src="/template/img/recipes/recipes-icons/serving.svg"
+                alt=""
+              />
+            </div>
+            <div class="recipes-feature__serving-text">
+              {{{recipe.serving}}}
+            </div>
+          </div>
+          <div class="recipes-feature__difficulty">
+            <div class="recipes-feature__difficulty-img">
+              <img src="{{{recipe.difficultyImg}}}" alt="" />
+            </div>
+            <div class="recipes-feature__difficulty-text">
+              {{{recipe.difficulty}}}
             </div>
           </div>
         </div>
       </div>
-      <div class="recipes-item">
-        <div class="recipes-item__favorites"></div>
-        <div class="recipes-item__img">
-          <a href="#" class="recipes-item__img-link">
-            <img src="/template/img/recipes/food-2.jpg" alt="" />
-          </a>
-        </div>
-        <div class="recipes-item__content">
-          <h3 class="recipes-item__title">Classic tiramisu in a glass</h3>
-          <div class="recipes-item__feature recipes-feature">
-            <div class="recipes-feature__time">
-              <div class="recipes-feature__time-img">
-                <img
-                  src="/template/img/recipes/recipes-icons/time.svg"
-                  alt=""
-                />
-              </div>
-              <div class="recipes-feature__time-text">1 h 30 min</div>
-            </div>
-            <div class="recipes-feature__serving">
-              <div class="recipes-feature__serving-img">
-                <img
-                  src="/template/img/recipes/recipes-icons/serving.svg"
-                  alt=""
-                />
-              </div>
-              <div class="recipes-feature__serving-text">4</div>
-            </div>
-            <div class="recipes-feature__difficulty">
-              <div class="recipes-feature__difficulty-img">
-                <img
-                  src="/template/img/recipes/recipes-icons/star-light.svg"
-                  alt=""
-                />
-              </div>
-              <div class="recipes-feature__difficulty-text">light</div>
-            </div>
-          </div>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>
