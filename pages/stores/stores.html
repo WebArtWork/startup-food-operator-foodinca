@@ -37,14 +37,14 @@
 
         <div class="stores-page__wrapper">
             {% for store in stores %}
-
-            <a href="/store/{{{store.url || store.id}}}" class="stores-page__card stores-page-card">
+            {% if store.domain %}
+            <a href="https://{{{store.domain}}}" class="stores-page__card stores-page-card">
                 <div class="stores-page-card__img">
                     <img src="{{{store.thumb}}}" alt="{{{store.name}}}" />
                 </div>
                 <span class="stores-page-card__title">{{{store.name}}}</span>
             </a>
-
+            {% endif %}
             {% endfor %}
         </div>
     </div>
