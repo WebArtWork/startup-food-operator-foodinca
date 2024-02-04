@@ -18,12 +18,12 @@
 		{% for theme in themes %}
 
 		<div class="themes-wrapper__card themes-card">
-			<a href="https://{{{theme.name}}}.foodin.ca" class="themes-card__img">
+			<a href="https://{{{theme.folder || theme.id}}}.foodin.ca" class="themes-card__img">
 				<img src="{{{theme.thumb}}}" alt="{{{theme.name}}}" />
 			</a>
 			<div class="themes-card__text">
 				<span class="themes-card__title">{{{theme.name}}}</span>
-				<a href="https://{{{theme.name}}}.foodin.ca" class="themes-card__link">View demo</a>
+				<a href="https://{{{theme.folder || theme.id}}.foodin.ca" class="themes-card__link">View demo</a>
 			</div>
 		</div>
 
