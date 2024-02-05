@@ -120,6 +120,11 @@
     img {
       width: 26px;
       height: 26px;
+      user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      pointer-events: none;
     }
 
     &-text {
@@ -197,75 +202,75 @@
 }
 
 @media (max-width: 576px) {
-    .recipes__list {
-      grid-template-columns: 1fr;
-      gap: 70px 0;
+  .recipes__list {
+    grid-template-columns: 1fr;
+    gap: 70px 0;
+  }
+
+  .recipes-item {
+    max-width: 400px;
+
+    &__title {
+      padding-bottom: 10px;
     }
-  
-    .recipes-item {
-      max-width: 400px;
 
-      &__title{
-        padding-bottom: 10px;
-      }
-  
-      &__img-link {
-        img {
-          width: 400px;
-          height: 270px;
-        }
-      }
-    }
-  
-    .recipes-feature {
-      &__time,
-      &__serving,
-      &__difficulty {
-        gap: 7px;
-        padding: 8px 20px;
-      }
-
-      &__time{
-        padding-left: 0;
-      }
-
-      &__difficulty{
-        padding-right: 0;
+    &__img-link {
+      img {
+        width: 400px;
+        height: 270px;
       }
     }
   }
 
-  @media (max-width: 420px) {
-    .recipes__list {
-      grid-template-columns: 1fr;
-      gap: 60px 0;
+  .recipes-feature {
+    &__time,
+    &__serving,
+    &__difficulty {
+      gap: 7px;
+      padding: 8px 20px;
     }
-  
-    .recipes-item {
-      max-width: 330px;
-  
-      &__img-link {
-        img {
-          width: 330px;
-          height: 225px;
-        }
-      }
+
+    &__time {
+      padding-left: 0;
     }
-  
-    .recipes-feature {
-      &__time,
-      &__serving,
-      &__difficulty {
-        gap: 5px;
-        padding: 7px 15px;
-      }
 
-      &__time{
-        padding-left: 0;
-      }
+    &__difficulty {
+      padding-right: 0;
+    }
+  }
+}
 
-      &__difficulty{
-        padding-right: 0;
+@media (max-width: 420px) {
+  .recipes__list {
+    grid-template-columns: 1fr;
+    gap: 60px 0;
+  }
+
+  .recipes-item {
+    max-width: 330px;
+
+    &__img-link {
+      img {
+        width: 330px;
+        height: 225px;
       }
     }
   }
+
+  .recipes-feature {
+    &__time,
+    &__serving,
+    &__difficulty {
+      gap: 5px;
+      padding: 7px 15px;
+    }
+
+    &__time {
+      padding-left: 0;
+    }
+
+    &__difficulty {
+      padding-right: 0;
+    }
+  }
+}
