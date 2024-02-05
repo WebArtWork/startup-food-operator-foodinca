@@ -1,9 +1,11 @@
 console.log('started properly');
-let logo = document.querySelector('.topbar__logo');
+let logo = document.querySelectorAll('.topbar__logo');
 let eye = '<div class="eye"></div>';
+logo.forEach(element => {
+  element.insertAdjacentHTML( 'afterbegin', eye );
+  element.insertAdjacentHTML( 'afterbegin', eye );
+});
 
-logo.insertAdjacentHTML( 'afterbegin', eye );
-logo.insertAdjacentHTML( 'afterbegin', eye );
 
 $("body").mousemove(function(event) {
     var eye = $(".eye");
