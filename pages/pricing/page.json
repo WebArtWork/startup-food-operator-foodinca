@@ -1,3 +1,41 @@
 {
-	"name": "pricing"
+	"name": "pricing",
+	"features": [
+		{
+			"name": "Web site of the restaurant",
+			"description": "You get the QR menu",
+			"inPlan": {
+				"1": true,
+				"2": true
+			},
+			"inDone": {
+				"1": true,
+				"2": true
+			}
+		},
+		{
+			"name": "Digital Menu with Unlimited Groups & Items",
+			"description": "Groups for your menu",
+			"inPlan": {
+				"1": false,
+				"2": true
+			},
+			"inDone": {
+				"1": false,
+				"2": false
+			}
+		}
+	],
+	"plans": [
+		{
+			"_id": "1",
+			"name": "basic",
+			"price": 0
+		},
+		{
+			"_id": "2",
+			"name": "paid",
+			"price": 10
+		}
+	]
 }

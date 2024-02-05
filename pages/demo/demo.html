@@ -1,13 +1,11 @@
 <section class="hero">
-	<!-- 	
 	<video autoplay muted loop class="hero__bgvideo">
 		<source src="/template/img/hero-bg1.mp4" type="video/mp4" />
 	</video>
-	-->
 	<div class="hero__container">
 		<div class="hero__main">
 			<h1 class="hero__title">
-				{{{translate("Template.The perfect online menu for your business is already prepared")}}}
+				{{{translate("Template.The perfect online store for your business is already prepared")}}}
 			</h1>
 		</div>
 
@@ -18,16 +16,16 @@
 	</div>
 </section>
 
-<section class="features">
+<!-- <section class="features">
 	<div class="features__container">
 		<div class="features__item features-item">
 			<div class="features-item__icon">
 				<img src="/template/img/icons/feautures/templates.svg" alt="Templates" />
 			</div>
 			<div class="features-item__text">
-				<h3 class="features-item__subtitle">{{{translate("Template.Menu themes")}}}</h3>
+				<h3 class="features-item__subtitle">{{{translate("Template.Site templates")}}}</h3>
 				<p class="features-item__desc">
-					{{{translate("Template.Themes for your websites that can quickly and easily transform into your online menu")}}}
+					{{{translate("Template.Themes for websites that can quickly and easily transform into your store")}}}
 				</p>
 			</div>
 		</div>
@@ -38,12 +36,11 @@
 			<div class="features-item__text">
 				<h3 class="features-item__subtitle">{{{translate("Template.Buying")}}}</h3>
 				<p class="features-item__desc">
-					{{{translate("Template.Our platform offers a convenient business support, which will increase joy of your clients")}}}
+					{{{translate("Template.Our platform offers a convenient search and filtering system that will help you purchase exactly what you're looking for")}}}
 				</p>
 			</div>
 		</div>
-		
-		<!-- 
+
 		<div class="features__item features-item">
 			<div class="features-item__icon">
 				<img src="/template/img/icons/feautures/designs.svg" alt="Your designs" />
@@ -55,7 +52,6 @@
 				</p>
 			</div>
 		</div>
-		-->
 
 		<div class="features__item features-item">
 			<div class="features-item__icon">
@@ -64,62 +60,12 @@
 			<div class="features-item__text">
 				<h3 class="features-item__subtitle">{{{translate("Template.Safety and Reliability")}}}</h3>
 				<p class="features-item__desc">
-					{{{translate("Template.We prioritize the security of your client payment. Our platform utilizes advanced encryption technologies to protect user information")}}}
+					{{{translate("Template.We prioritize the security of your purchases, sales, and exchanges. Our platform utilizes advanced encryption technologies to protect your personal information")}}}
 				</p>
 			</div>
 		</div>
 	</div>
 </section>
-
-<section class="waw">
-	<h2 class="waw__title">
-		{{{translate("Template.Why foodin.ca?")}}}
-	</h2>
-	<div class="waw_container">
-	<div class="waw__c">
-<!-- 		<img src="/template/img/qr-menu.jpg"> -->
-		<p class="waw__text">
-			{{{translate("Template.Don't need to download the app. Using the QR code, an online page is loaded where you can view the menu.")}}}
-		</p>
-	</div>
-
-	<div class="fic__c">
-<!-- 		<img src="/template/img/open.jpg"> -->
-		<p class="fic__text">
-			{{{translate("Template.Personalized menu for convenience and efficiency.  Quick changes in assortment, price updates, secure usage  contributing to productivity and savings.")}}}
-		</p>
-	</div>
-
-	<div class="waw__c">
-<!-- 		<img src="/template/img/qr-menu.jpg"> -->
-		<p class="waw__text">
-			{{{translate("Template.Save on developing your own website! Get Waiter at an advantageous price and enjoy seamless operations.")}}}
-		</p>
-	</div>
-
-	<div class="fic__c">
-<!-- 		<img src="/template/img/open.jpg"> -->
-		<p class="fic__text">
-			{{{translate("Template.Contactless payment.No need to wait for the waiter with the bill.  Payment is made instantly with Waiter!")}}}
-		</p>
-	</div>
-
-	<div class="waw__c">
-<!-- 		<img src="/template/img/qr-menu.jpg"> -->
-		<p class="waw__text">
-			{{{translate("Template.Increased sales and profits.  Convenient arrangement of all items to attract customers:  photos, prices, ingredients, recommendations.  Orders increase thanks to visualization.")}}}
-		</p>
-	</div>
-
-	<div class="fic__c">
-<!-- 		<img src="/template/img/open.jpg"> -->
-		<p class="fic__text">
-			{{{translate("Template.Call the waiter. No need to wait for the waiter to appear.  With our app, you will be heard from any corner of the establishment.")}}}
-		</p>
-	</div>
-	</div>
-</section>
-
 
 <section class="themes">
 	<div class="themes__container">
@@ -127,7 +73,7 @@
 			<h2 class="themes__title title">{{{translate("Template.Themes")}}}</h2>
 		</div>
 		<p class="themes__text">
-			{{{translate("Template.Choose a theme that will give your menu a clean and modern look, allowing your products to appear more appealing and capture customers' attention")}}}
+			{{{translate("Template.Choose a template that will give your store a clean and modern look, allowing your products to appear more appealing and capture customers' attention")}}}
 		</p>
 
 		<div class="themes__slider themes-slider swiper">
@@ -147,7 +93,7 @@
 		<a href="/themes" class="themes__find-more">{{{translate("Template.View all")}}}</a>
 	</div>
 </section>
-<!--
+
 <section class="products">
 	<div class="products__container">
 		<div class="products__header">
@@ -174,7 +120,7 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section> -->
 
 <section class="articles">
 	<div class="articles__container">
@@ -208,18 +154,117 @@
 		<a href="https://wawify.com/articles" class="articles__link">{{{translate("Template.View all articles")}}}</a>
 	</div>
 </section>
- -->
 
+<div class="container">
+<section class="order-manager">
+	{% for agent in agents %}
+		<div class="order_agent">
+		<img src="https://webart.work{{{agent.thumb}}}" alt="" width="300px">
+		<h3>{{{agent.name}}}</h3>
+		{% if agent.data.phone %}
+			<a href="tel:{{{agent.data.phone}}}">{{{agent.data.phone}}}</a>
+		{% endif %}
+	</div>
+	<div class="order">
+	{% for experience in agent.experiences %}
+	<span title="{{{experience.descriptionua}}}">
+	  <p>Послуга: {{{experience.nameua}}}</p>
+	  {% if experience.pricehourlyuah %}
+	  <p>Ціна:{{{experience.pricehourlyuah}}} грн/год.</p>
+	  {% endif %}
+	  {% endfor %}
+	</span>
+	</div>
+	{% endfor %}
+  </section>
+</div>
+
+<div class="container">
+<div class="slider-container">
+   <div class="slider-content">
+	  <div class="slide">
+	<div class="slide_text">Minor Sponsor</div>
+	<div class="slide_text">500$ <br />per month</div>
+	<div class="slide_text">Hire Part Time Developer</div>
+	<button>Start</button>
+	</div>
+	  <div class="slide">
+	<div class="slide_text">Minor Sponsor</div>
+	<div class="slide_text">2000$ <br />per month</div>
+	<div class="slide_text">Hire Full Time Developer</div>
+	<button>Start</button>
+	</div>
+	<div class="slide">
+	<div class="slide_text">Partner</div>
+	<div class="slide_text">Donation </div>
+	<div class="slide_text">Add Feature</div>
+	<button>Donate</button>
+	</div>
+	<div class="slide">
+	<div class="slide_text">Minor Sponsor</div>
+	<div class="slide_text">500$ <br />per month</div>
+	<div class="slide_text">Hire Part Time Developer</div>
+	<button>Start</button>
+	</div>
+	  <div class="slide">
+	<div class="slide_text">Minor Sponsor</div>
+	<div class="slide_text">2000$ <br />per month</div>
+	<div class="slide_text">Hire Full Time Developer</div>
+	<button>Start</button>
+	</div>
+	<div class="slide">
+	<div class="slide_text">Partner</div>
+	<div class="slide_text">Donation </div>
+	<div class="slide_text">Add Feature</div>
+	<button>Donate</button>
+	</div>
+</div>
+</div>
+</div>
+
+<div class="container">
+    <form class="meeting">
+        <label for="name">Your name:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+        <label for="number">Your number:</label><br>
+        <input type="number" id="number" name="number"><br><br>
+        <label for="email">Your email:</label><br>
+        <input type="email" id="email" name="email"><br><br>
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+        <button type="submit" value="Submit">Submit</button>
+      </form>
+    </div>
+</section>
+<!-- 
 <section class="cta">
 	<div class="cta__container">
 		<h2 class="cta__title">
-			{{{translate("Template.Upgrade your business with Food In Canada")}}}
+			{{{translate("Template.Upgrade your business with Wawify")}}}
 		</h2>
 
 		<p class="cta__text">
-			{{{translate("Template.Try on a website theme that you like for your online menu")}}}
+			{{{translate("Template.Try on a website template that you like for your store")}}}
 		</p>
 
 		<a href="/manage/profile" class="cta__link">{{{translate("Template.Try on")}}}</a>
 	</div>
-</section>
+</section> -->
+<script>
+	// JavaScript для руху слайдера
+	let slider = document.querySelector('.slider-content');
+	let slides = document.querySelectorAll('.slide');
+	let slideWidth = slides[0].offsetWidth;
+	let counter = 0;
+
+	function moveSlide() {
+	  counter++;
+	  if (counter === slides.length) {
+		counter = 0;
+	  }
+	  let offset = -slideWidth * counter;
+	  slider.style.transform = `translateX(${offset}px)`;
+	}
+
+	setInterval(moveSlide, 2000); // Час між перемиканням слайдів (в мілісекундах)
+  </script>
