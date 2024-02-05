@@ -1,74 +1,81 @@
 <section class="recipe">
-  <div class="recipe__container">
-    {% for tag in recipe %}
-    <h1 class="recipe__title">{{{tag.name}}}</h1>
-    <div class="recipe__img">
-      <div class="recipe__favorites"></div>
-      <img src="{{{tag.thumb}}}" alt="{{{tag.thumb}}}" />
-    </div>
-    <div class="recipes-feature recipe-feature">
-      <div class="recipes-feature__time">
-        <div class="recipes-feature__time-img">
-          <img src="/template/img/recipes/recipes-icons/time.svg" alt="time" />
-        </div>
-        <div class="recipes-feature__time-title">COOK TIME</div>
-        <div class="recipes-feature__time-text">{{{tag.cookingTime}}}</div>
-      </div>
-      <div class="recipes-feature__serving">
-        <div class="recipes-feature__serving-img">
-          <img
-            src="/template/img/recipes/recipes-icons/serving.svg"
-            alt="serving"
-          />
-        </div>
-        <div class="recipes-feature__serving-title">SERVING</div>
-        <div class="recipes-feature__serving-text">{{{tag.serving}}}</div>
-      </div>
-      <div class="recipes-feature__difficulty">
-        <div class="recipes-feature__difficulty-img">
-          <img src="{{{tag.difficultyImg}}}" alt="star" />
-        </div>
-        <div class="recipes-feature__difficulty-title">DIFFICULTY</div>
-        <div class="recipes-feature__difficulty-text">{{{tag.difficulty}}}</div>
-      </div>
-    </div>
+	<div class="recipe__container">
+		<h1 class="recipe__title">{{{name}}}</h1>
+		<div class="recipe__img">
+			<div class="recipe__favorites"></div>
+			<img src="{{{thumb}}}" alt="{{{name}}}" />
+		</div>
+		<div class="recipes-feature recipe-feature">
+			<div class="recipes-feature__time">
+				<div class="recipes-feature__time-img">
+					<img src="/template/img/recipes/recipes-icons/time.svg" alt="time" />
+				</div>
+				<div class="recipes-feature__time-title">COOK TIME</div>
+				<div class="recipes-feature__time-text">{{{tag.cookingTime}}}</div>
+			</div>
+			<div class="recipes-feature__serving">
+				<div class="recipes-feature__serving-img">
+					<img src="/template/img/recipes/recipes-icons/serving.svg" alt="serving" />
+				</div>
+				<div class="recipes-feature__serving-title">SERVING</div>
+				<div class="recipes-feature__serving-text">{{{tag.serving}}}</div>
+			</div>
+			<div class="recipes-feature__difficulty">
+				{% if recipe.difficulty === 1 %}
+				<div class="recipes-feature__difficulty-img">
+					<img src="/template/img/recipes/recipes-icons/star-light.svg" alt="star" />
+				</div>
+				<div class="recipes-feature__difficulty-title">DIFFICULTY</div>
+				<div class="recipes-feature__difficulty-text">Light</div>
+				{% endif %}
+				{% if recipe.difficulty === 2 %}
+				<div class="recipes-feature__difficulty-img">
+					<img src="/template/img/recipes/recipes-icons/star-moderately.svg" alt="star" />
+				</div>
+				<div class="recipes-feature__difficulty-title">DIFFICULTY</div>
+				<div class="recipes-feature__difficulty-text">Moderately</div>
+				{% endif %}
+				{% if recipe.difficulty >= 3 %}
+				<div class="recipes-feature__difficulty-img">
+					<img src="/template/img/recipes/recipes-icons/star-difficult.svg" alt="star" />
+				</div>
+				<div class="recipes-feature__difficulty-title">DIFFICULTY</div>
+				<div class="recipes-feature__difficulty-text">Difficult</div>
+				{% endif %}
+			</div>
+		</div>
 
-    <h2 class="recipe__descr">{{{tag.descr}}}</h2>
-    {% endfor %}
+		<h2 class="recipe__descr">{{{description}}}</h2>
 
-    <div class="ingredients">
-      <div class="ingredients__title">INGREDIENTS</div>
-      <div class="ingredients__info">
-        {% for item in ingredients %}
-        <div class="ingredients-list">
-          <div class="ingredients-list__title">{{{item.name}}}</div>
-          <ul class="ingredients-list__ul">
-            {% for listItem in item.list %}
-            <li class="ingredients-list__li">{{{ listItem.ingredient }}}</li>
-            {% endfor %}
-          </ul>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
+		<div class="ingredients">
+			<div class="ingredients__title">INGREDIENTS</div>
+			<div class="ingredients__info">
+				<div class="ingredients-list">
+					<!-- <div class="ingredients-list__title">{{{ingredient.name}}}</div> -->
+					<ul class="ingredients-list__ul">
+						{% for ingredient in ingredients %}
+						<li class="ingredients-list__li">{{{ingredient.name}}}</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+		</div>
 
-    <div class="cooking">
-      <div class="cooking__title">step by step cooking</div>
-      {% for item in cooking %}
-      <div class="cooking-item">
-        <div class="cooking-item__steps">
-          step&nbsp;<span>{{{item.step}}}</span>
-        </div>
-        <div class="cooking-item__info">
-          <div class="cooking-item__info-descr">{{{item.descr}}}</div>
-          <img
-            src="{{{item.thumb}}}"
-            alt="{{{item.thumb}}}"
-            class="cooking-item__info-img"
-          />
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
+		<div class="cooking">
+			<div class="cooking__title">step by step cooking</div>
+			{% for step in cookingSteps %}
+			<div class="cooking-item">
+				<div class="cooking-item__steps">
+					step&nbsp;<span>{{{step.index + 1}}}</span>
+				</div>
+				<div class="cooking-item__info">
+					<div class="cooking-item__info-descr">{{{step.text}}}</div>
+					{% if step.thumb %}
+					<img src="{{{step.thumb}}}" alt="{{{step.thumb}}}" class="cooking-item__info-img" />
+					{% endif %}
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
 </section>
