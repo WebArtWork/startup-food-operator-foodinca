@@ -1,0 +1,79 @@
+{   
+	"recipe":[
+     {
+		"id": "/recipe",
+		"name": "BROWNIE WITH ORANGE PEEL AND NUT PRALINE",
+		"thumb": "/template/img/recipes/food-4.jpg",
+        "cookingTime" : "1 h 30 min",
+        "serving": 4,
+        "difficultyImg": "/template/img/recipes/recipes-icons/star-light.svg",
+        "difficulty": "light",
+        "descr": "HOW TO PREPARE BROWNIE WITH ORANGE PEEL AND NUT PRALINE"
+     }
+  ],
+
+  "ingredients":[
+    {
+        "name": "For the dough:",
+        "list": [
+            {
+                "ingredient": "150 g dark chocolate"
+            },
+            {
+                "ingredient": "50 g flour"
+            },
+            {
+                "ingredient": "100 g sugar"
+            },
+            {
+                "ingredient": "10 g cocoa"
+            },
+            {
+                "ingredient": "1 orange"
+            },
+            {
+                "ingredient": "80 g butter"
+            },
+            {
+                "ingredient": "5 g baking powder"
+            },
+            {
+                "ingredient": "3 eggs"
+            }
+        ]
+    },
+    {
+        "name": "For pralines:",
+        "list": [
+            {
+                "ingredient": "30 g sugar"
+            },
+            {
+                "ingredient": "100 g walnut kernels"
+            }
+        ]
+    }
+],
+
+    "cooking":[
+    {
+        "step": "1",
+        "descr": "Preheat the oven to 180 degrees. In a small bowl in a water bath, melt 150g of chocolate and 80 g of butter. Stir until smooth. Put it aside to cool.",
+        "thumb": "/template/img/recipes/food-4.jpg"
+    },
+    {
+       "step": "2",
+       "descr": "In a deep bowl, beat 3 eggs with 100 g of sugar until the mass becomes dense and homogeneous.",
+       "thumb": "/template/img/recipes/food-3.jpg"
+    },
+    {
+        "step": "3",
+        "descr": "Sift 50 g of flour and mix with baking powder (5 g) and cocoa powder (10 g). Mix with melted chocolate until smooth.",
+        "thumb": "/template/img/recipes/food-5.jpg"
+    }
+ ]
+
+
+
+
+}

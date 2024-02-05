@@ -1,0 +1,50 @@
+{   
+	"recipes":[
+     {
+		"id": "/recipe1",
+		"thumb": "/template/img/recipes/food-1.jpg",
+		"name": "Twice as tasty. A recipe for pie with cherries and cherry sauce",
+        "cookingTime" : "1 h 30 min",
+        "serving": 4,
+        "difficultyImg": "/template/img/recipes/recipes-icons/star-light.svg",
+        "difficulty": "light"
+     },
+     {
+		"id": "/recipe2",
+		"thumb": "/template/img/recipes/food-2.jpg",
+		"name": "Hollywood star. Cobb salad with chicken fillet",
+        "cookingTime" : "35 minutes",
+        "serving": 2,
+        "difficultyImg": "/template/img/recipes/recipes-icons/star-light.svg",
+        "difficulty": "light"
+     },
+     {
+		"id": "/recipe3",
+		"thumb": "/template/img/recipes/food-3.jpg",
+		"name": "Simple, tasty and useful. How to make date truffles",
+        "cookingTime" : "15 minutes",
+        "serving": 6,
+        "difficultyImg": "/template/img/recipes/recipes-icons/star-moderately.svg",
+        "difficulty": "moderately"
+     },
+     {
+		"id": "/recipe4",
+		"thumb": "/template/img/recipes/food-4.jpg",
+		"name": "Canadian batter tart: an incredible dessert",
+        "cookingTime" : "1 hour",
+        "serving": 4, 
+        "difficultyImg": "/template/img/recipes/recipes-icons/star-difficult.svg",
+        "difficulty": "difficult"
+     },
+     {
+		"id": "/recipe5",
+		"thumb": "/template/img/recipes/food-5.jpg",
+		"name": "Juicy orange pie: a recipe",
+        "cookingTime" : "1 h 45 min",
+        "serving": 3,
+        "difficultyImg": "/template/img/recipes/recipes-icons/star-light.svg",
+        "difficulty": "light"
+     }
+  ]
+}
+
