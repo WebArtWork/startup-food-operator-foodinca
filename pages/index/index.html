@@ -247,6 +247,96 @@
 				<li>{{{translate("Template.Promotions and Discounts")}}}</li>
 			</ul>
 		</div>
+		<div class="waw__c">
+			<img src="/template/img/qr-menu.jpg">
+			<h3>{{{translate("Template.Own Masterpiece")}}}</h3>
+			<p class="waw__text">
+				{{{translate("Template.Unleash your inner chef with our curated collection of cooking recipes. Designed for both novice and seasoned cooks, these recipes are a celebration of flavors, creativity, and simplicity. From mouthwatering appetizers to delectable main courses, embark on a culinary journey and discover the joy of crafting delicious dishes right in your own kitchen.")}}}
+			</p>
+			<ul>
+				<li>{{{translate("Template.Diverse Selection")}}}</li>
+				<li>{{{translate("Template.Accessible Ingredients")}}}</li>
+				<li>{{{translate("Template.Step-by-Step Guides")}}}</li>
+				<li>{{{translate("Template.Time-Efficient")}}}</li>
+				<li>{{{translate("Template.Visual Appeal")}}}</li>
+				<li>{{{translate("Template.Share Your Creations")}}}</li>
+				<li>{{{translate("Template.Endless Inspiration")}}}</li>
+				<li>{{{translate("Template.Cook with Confidence")}}}</li>
+			</ul>
+		</div>
+	</div>
+</section>
+
+<section class="products">
+	<div class="products__container">
+		<div class="products__header">
+			<h2 class="products__title title">{{{translate("Template.Recipes")}}}</h2>
+			<a href="/recipes" class="products__find-more">{{{translate("Template.View all")}}}</a>
+
+		</div>
+		<p class="products__text">
+			{{{translate("Template.Unleash your inner chef with this open-ended recipe that invites you to embark on a culinary adventure. Whether you're in the mood for a savory delight or a sweet sensation, the canvas is yours to paint. Choose from a diverse array of fresh, quality ingredients, and let your imagination guide you through the creative process. This recipe empowers you to experiment with flavors, tweak techniques, and tailor the dish to your unique preferences. The kitchen is your playground, and this recipe is your inspiration. Embrace the joy of creating and relish in the satisfaction of sharing a one-of-a-kind culinary masterpiece.")}}}
+		</p>
+
+		<div class="products__slider products-slider swiper">
+			<div class="themes-slider__wrapper swiper-wrapper">
+				{% for recipe in recipes %}
+				<div class="recipes-item">
+					<div class="recipes-item__img">
+						<div class="recipes-item__favorites"></div>
+						<a href="{{{recipe.url || '/recipe/' + recipe.id}}}" class="recipes-item__img-link">
+							<img src="{{{recipe.thumb}}}" alt="{{{recipe.thumb}}}" />
+						</a>
+					</div>
+
+					<h3 class="recipes-item__title">
+						<a href="{{{recipe.url || '/recipe/' + recipe.id}}}" class="recipes-item__title-link">
+							{{{recipe.name}}}
+						</a>
+					</h3>
+
+					<div class="recipes-item__feature recipes-feature">
+						<div class="recipes-feature__time">
+							<div class="recipes-feature__time-img">
+								<img src="/template/img/recipes/recipes-icons/time.svg" alt="time" />
+							</div>
+							<div class="recipes-feature__time-text">
+								{{{recipe.cookingTime}}}
+							</div>
+						</div>
+						<div class="recipes-feature__serving">
+							<div class="recipes-feature__serving-img">
+								<img src="/template/img/recipes/recipes-icons/serving.svg" alt="serving" />
+							</div>
+							<div class="recipes-feature__serving-text">
+								{{{recipe.serving}}}
+							</div>
+						</div>
+						<div class="recipes-feature__difficulty">
+							{% if recipe.difficulty === 1 %}
+							<div class="recipes-feature__difficulty-img">
+								<img src="/template/img/recipes/recipes-icons/star-light.svg" alt="star" />
+							</div>
+							<div class="recipes-feature__difficulty-text">Light</div>
+							{% endif %}
+							{% if recipe.difficulty === 2 %}
+							<div class="recipes-feature__difficulty-img">
+								<img src="/template/img/recipes/recipes-icons/star-moderately.svg" alt="star" />
+							</div>
+							<div class="recipes-feature__difficulty-text">Moderately</div>
+							{% endif %}
+							{% if recipe.difficulty >= 3 %}
+							<div class="recipes-feature__difficulty-img">
+								<img src="/template/img/recipes/recipes-icons/star-difficult.svg" alt="star" />
+							</div>
+							<div class="recipes-feature__difficulty-text">Difficult</div>
+							{% endif %}
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
 	</div>
 </section>
 
