@@ -66,7 +66,7 @@
 			{% for step in recipe.cookingSteps %}
 			<div class="cooking-item">
 				<div class="cooking-item__steps">
-					step&nbsp;<span>{{{step.index + 1}}}</span>
+					step&nbsp;<span>{{{loop.index + 1}}}</span>
 				</div>
 				<div class="cooking-item__info">
 					<div class="cooking-item__info-descr">{{{step.text}}}</div>
