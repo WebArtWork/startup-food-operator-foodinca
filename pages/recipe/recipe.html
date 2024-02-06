@@ -1,9 +1,9 @@
 <section class="recipe">
 	<div class="recipe__container">
-		<h1 class="recipe__title">{{{name}}}</h1>
+		<h1 class="recipe__title">{{{recipe.name}}}</h1>
 		<div class="recipe__img">
 			<div class="recipe__favorites"></div>
-			<img src="{{{thumb}}}" alt="{{{name}}}" />
+			<img src="{{{recipe.thumb}}}" alt="{{{recipe.name}}}" />
 		</div>
 		<div class="recipes-feature recipe-feature">
 			<div class="recipes-feature__time">
@@ -11,14 +11,14 @@
 					<img src="/template/img/recipes/recipes-icons/time.svg" alt="time" />
 				</div>
 				<div class="recipes-feature__time-title">COOK TIME</div>
-				<div class="recipes-feature__time-text">{{{tag.cookingTime}}}</div>
+				<div class="recipes-feature__time-text">{{{recipe.cookingTime}}}</div>
 			</div>
 			<div class="recipes-feature__serving">
 				<div class="recipes-feature__serving-img">
 					<img src="/template/img/recipes/recipes-icons/serving.svg" alt="serving" />
 				</div>
 				<div class="recipes-feature__serving-title">SERVING</div>
-				<div class="recipes-feature__serving-text">{{{tag.serving}}}</div>
+				<div class="recipes-feature__serving-text">{{{recipe.serving}}}</div>
 			</div>
 			<div class="recipes-feature__difficulty">
 				{% if recipe.difficulty === 1 %}
@@ -45,7 +45,7 @@
 			</div>
 		</div>
 
-		<h2 class="recipe__descr">{{{description}}}</h2>
+		<h2 class="recipe__descr">{{{recipe.description}}}</h2>
 
 		<div class="ingredients">
 			<div class="ingredients__title">INGREDIENTS</div>
@@ -53,7 +53,7 @@
 				<div class="ingredients-list">
 					<!-- <div class="ingredients-list__title">{{{ingredient.name}}}</div> -->
 					<ul class="ingredients-list__ul">
-						{% for ingredient in ingredients %}
+						{% for ingredient in recipe.ingredients %}
 						<li class="ingredients-list__li">{{{ingredient.name}}}</li>
 						{% endfor %}
 					</ul>
@@ -63,7 +63,7 @@
 
 		<div class="cooking">
 			<div class="cooking__title">step by step cooking</div>
-			{% for step in cookingSteps %}
+			{% for step in recipe.cookingSteps %}
 			<div class="cooking-item">
 				<div class="cooking-item__steps">
 					step&nbsp;<span>{{{step.index + 1}}}</span>
