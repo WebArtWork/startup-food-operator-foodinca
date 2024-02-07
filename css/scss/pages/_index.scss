@@ -786,9 +786,28 @@
   }
 }
 
+@media (max-width: 576px) {
+  .cta-form {
+    margin-top: 40px;
+    padding: 30px 30px 5px;
+  }
+}
+
+@media (max-width: 430px){
+  .cta-form__row {
+    input[type="tel"],
+    input[type="email"],
+    input[type="text"],
+    textarea {
+      background-color: #fff;
+      max-width: 260px;
+    }
+  }
+}
+
 /* --------------------------------- /Cta --------------------------------- */
 
-/* ---------------------------------- waw --------------------------------- */
+/* ---------------------------------- ecosystem --------------------------------- */
 
 .ecosystem {
   // background: linear-gradient(340deg, rgb(49, 82, 91) 0%, rgb(249, 143, 65) 100%);
@@ -809,19 +828,21 @@
     font-weight: 600;
     color: #111;
     margin-bottom: 100px;
+    padding: 0 20px;
   }
+}
 
-  &__item {
-    display: flex;
-    background-color: #ffeee2;
-    // background-color: #fff;
-    border-radius: 20px;
+.ecosystem-item {
+  display: flex;
+  background-color: #ffeee2;
+  // background-color: #fff;
+  border-radius: 20px;
 
-    img {
-      border-radius: 20px 0 0 20px;
-      min-width: 230px;
-      height: 230px;
-    }
+  img {
+    border-radius: 20px 0 0 20px;
+    min-width: 230px;
+    height: 230px;
+    object-fit: cover; //???
   }
 
   &__info {
@@ -841,6 +862,80 @@
   }
 }
 
+@media (max-width: 1385px) {
+  .ecosystem-item {
+    max-height: 230px;
+    &__info {
+      padding: 15px 20px;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .ecosystem {
+    &__container {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .ecosystem-item {
+    &__info {
+      padding: 25px 30px;
+    }
+
+    img {
+      width: 230px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .ecosystem-item {
+    &__info {
+      padding: 15px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .ecosystem {
+    &__title {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .ecosystem-item {
+    background-color: #ffe7d5;
+    flex-direction: column;
+    max-width: 420px;
+    max-height: 600px;
+    margin: 0 auto;
+
+    img {
+      border-radius: 20px 20px 0 0;
+      min-width: 420px;
+      min-height: 300px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .ecosystem-item {
+    max-width: 320px;
+
+    img {
+      border-radius: 20px 20px 0 0;
+      min-width: 320px;
+      min-height: 210px;
+    }
+  }
+}
+
+/* ---------------------------------- /ecosystem --------------------------------- */
+
+/* ---------------------------------- benefits --------------------------------- */
+
 .benefits {
   padding: clamp(6.25rem, 3.977rem + 11.36vw, 12.5rem) 0;
   max-width: 1430px;
@@ -858,6 +953,7 @@
 .benefits-item {
   display: flex;
   justify-content: space-between;
+  gap: 50px;
   // background-color: #f59236;
   color: #fff;
   border-radius: 20px;
@@ -911,83 +1007,33 @@
   }
 
   img {
-    max-width: 320px;
+    width: 320px;
+    object-fit: cover;
     border-radius: 20px;
     margin-right: 60px;
   }
 }
 
-.waw {
-  padding: clamp(6.25rem, 3.977rem + 11.36vw, 12.5rem) 0;
-  background: linear-gradient(
-    340deg,
-    rgb(49, 82, 91) 0%,
-    rgb(249, 143, 65) 100%
-  );
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-}
-.waw_container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1530px;
-}
-.waw_container img {
-  border-radius: 20px;
-}
-.waw__c,
-.fic__c {
-  width: 100%;
-  color: #ffffffd8;
-  flex-basis: calc(33.33%);
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  box-sizing: border-box;
+@media (max-width: 1200px) {
+  .benefits-item {
+    gap: 30px;
+    img {
+      margin-right: 0;
+    }
+  }
 }
 
-.waw__title,
-.fic__title {
-  width: 100%;
-  margin-bottom: 20px;
-  color: #000;
-  font-size: clamp(2.5rem, 1.773rem + 3.64vw, 4.5rem);
-  line-height: 1.2;
-  font-weight: 700;
-  text-align: center;
-  max-width: 1500px;
-  color: var(--primary-color);
-}
+@media (max-width: 800px) {
+  .benefits-item {
+    flex-direction: column-reverse;
+    align-items: center;
+    padding: 30px 20px;
 
-.waw__text,
-.fic__text {
-  font-size: clamp(1.125rem, 1.011rem + 0.57vw, 1.438rem);
-  font-weight: 450;
-  line-height: 1.4;
-  text-align: center;
-}
-
-.waw__link,
-.fic__link {
-  width: 200px;
-  height: 50px;
-  border-radius: 25.675px;
-  background: var(--secondary-color);
-  color: var(--primary-color);
-  font-weight: 600;
-  font-size: 22px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-@media (max-width: 767px) {
-  .waw__container,
-  .fic__container {
+    img {
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
