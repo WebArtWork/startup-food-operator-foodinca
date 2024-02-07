@@ -437,6 +437,16 @@
 			{{{translate("Template.Try on a website theme that you like for your online menu")}}}
 		</p>
 
-		<a href="/manage/profile" class="cta__link">{{{translate("Template.Try on")}}}</a>
+		<form class="cta-form">
+			<div class="cta-form__row">
+				<input type="text" id="name" name="name" placeholder="Name" required>
+				<input type="tel" id="phone" name="phone" placeholder="Phone" required>
+				<input type="email" id="email" name="email" placeholder="Email" required>
+				<textarea id="comments" name="comments" placeholder="Comments" rows="4"></textarea>
+				<button type="submit">Connect with us</button>
+			  </div>
+
+
+		</form>
 	</div>
 </section>
