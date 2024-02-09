@@ -1,50 +1,50 @@
 {
-	"recipe": {
-		"name": "BROWNIE WITH ORANGE PEEL AND NUT PRALINE",
-		"thumb": "/template/img/recipes/food-4.jpg",
-		"cookingTime": "1 h 30 min",
-		"serving": 4,
-		"difficulty": 1,
-		"description": "HOW TO PREPARE BROWNIE WITH ORANGE PEEL AND NUT PRALINE",
-		"ingredients": [
-			{
-			"text": "150 g dark chocolate"
-			},
-			{
-			"text": "50 g flour"
-			},
-			{
-			"text": "100 g sugar"
-			},
-			{
-			"text": "10 g cocoa"
-			},
-			{
-			"text": "1 orange"
-			},
-			{
-			"text": "80 g butter"
-			},
-			{
-			"text": "5 g baking powder"
-			},
-			{
-			"text": "3 eggs"
-			}
-		],
-		"cookingSteps": [
-			{
-			"text": "Preheat the oven to 180 degrees. In a small bowl in a water bath, melt 150g of chocolate and 80 g of butter. Stir until smooth. Put it aside to cool.",
-			"thumb": "/template/img/recipes/food-4.jpg"
-			},
-			{
-			"text": "In a deep bowl, beat 3 eggs with 100 g of sugar until the mass becomes dense and homogeneous.",
-			"thumb": "/template/img/recipes/food-3.jpg"
-			},
-			{
-			"text": "Sift 50 g of flour and mix with baking powder (5 g) and cocoa powder (10 g). Mix with melted chocolate until smooth.",
-			"thumb": "/template/img/recipes/food-5.jpg"
-			}
-		]
-	}
+  "recipe": {
+    "name": "BROWNIE WITH ORANGE PEEL AND NUT PRALINE",
+    "thumb": "/template/img/recipes/food-4.jpg",
+    "cookingTime": "1 h 30 min",
+    "serving": 4,
+    "difficulty": 1,
+    "description": "HOW TO PREPARE BROWNIE WITH ORANGE PEEL AND NUT PRALINE",
+    "ingredients": [
+      {
+        "text": "150 g dark chocolate"
+      },
+      {
+        "text": "50 g flour"
+      },
+      {
+        "text": "100 g sugar"
+      },
+      {
+        "text": "10 g cocoa"
+      },
+      {
+        "text": "1 orange"
+      },
+      {
+        "text": "80 g butter"
+      },
+      {
+        "text": "5 g baking powder"
+      },
+      {
+        "text": "3 eggs"
+      }
+    ],
+    "cookingSteps": [
+      {
+        "text": "Preheat the oven to 180 degrees. In a small bowl in a water bath, melt 150g of chocolate and 80 g of butter. Stir until smooth. Put it aside to cool.",
+        "thumb": "/template/img/recipes/food-4.jpg"
+      },
+      {
+        "text": "In a deep bowl, beat 3 eggs with 100 g of sugar until the mass becomes dense and homogeneous.",
+        "thumb": "/template/img/recipes/food-3.jpg"
+      },
+      {
+        "text": "Sift 50 g of flour and mix with baking powder (5 g) and cocoa powder (10 g). Mix with melted chocolate until smooth.",
+        "thumb": "/template/img/recipes/food-5.jpg"
+      }
+    ]
+  }
 }
