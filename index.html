@@ -69,11 +69,17 @@
 	{% if !hideLayout %}
 	<header class="topbar">
 		<div class="topbar__container">
+			{% if operator.domain === 'foodin.ca' %}
+				<a href="/" class="topbar__logo">
+					<img src="/template/img/logo-black.svg" alt="Wawify"/>
+					<img src="/template/img/logo-canada.svg" alt="Wawify" width="100px"> 
+				</a>
+			{% endif %}
+			{% if operator.domain === 'waiter.cloud' %}
 			<a href="/" class="topbar__logo">
-				<img src="/template/img/logo-black.svg" alt="Wawify"/>
-				<img src="/template/img/logo-canada.svg" alt="Wawify" width="100px"> 
+				<img src="/template/img/logo.png" alt="Wawify"/>
 			</a>
-
+			{% endif %}
 			<input id="topbar__toogle" type="checkbox" />
 			<label class="topbar__button" for="topbar__toogle">
 				<span></span>
@@ -119,10 +125,17 @@
 	<footer class="footer">
 		<div class="footer__container">
 			<div class="footer__logo">
+				{% if operator.domain === 'foodin.ca' %}
 				<a href="/" class="topbar__logo">
 					<img src="/template/img/logo-black.svg" alt="Wawify"/>
-					<img src="/template/img/logo-canada.svg" alt="Wawify" "> 
+					<img src="/template/img/logo-canada.svg" alt="Wawify" width="100px"> 
 				</a>
+			{% endif %}
+			{% if operator.domain === 'waiter.cloud' %}
+			<a href="/" class="topbar__logo">
+				<img src="/template/img/logo.png" alt="Wawify"/>
+			</a>
+			{% endif %}
 			</div>
 			<div class="footer__main footer-main">
 				<div class="footer-main__menu footer-menu">
