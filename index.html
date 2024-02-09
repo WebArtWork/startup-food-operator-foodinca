@@ -61,7 +61,7 @@
 	.welcome__form-btn{
 		color: var(--primary_color);
 	}
-	
+
 	</style>
 </head>
 
@@ -72,12 +72,12 @@
 			{% if operator.domain === 'foodin.ca' %}
 				<a href="/" class="topbar__logo">
 					<img src="/template/img/logo-black.svg" alt="Wawify"/>
-					<img src="/template/img/logo-canada.svg" alt="Wawify" width="100px"> 
+					<img src="/template/img/logo-canada.svg" alt="Wawify" width="100px">
 				</a>
 			{% endif %}
 			{% if operator.domain === 'waiter.cloud' %}
 			<a href="/" class="topbar__logo">
-				<img src="/template/img/logo.png" alt="Wawify"/>
+				<img src="/template/img/logo.png" alt="Wawify" style="height: 50px;"/>
 			</a>
 			{% endif %}
 			<input id="topbar__toogle" type="checkbox" />
@@ -101,7 +101,7 @@
 						<li class="topbar-menu__item">
 							<a href="/articles" class="topbar-menu__link">{{{translate("Template.Blog")}}}</a>
 						</li>
-						
+
 						<li class="topbar-menu__item">
 							<a href="/products" class="topbar-menu__link">{{{translate("Template.Products")}}}</a>
 						</li>
@@ -128,7 +128,7 @@
 				{% if operator.domain === 'foodin.ca' %}
 				<a href="/" class="topbar__logo">
 					<img src="/template/img/logo-black.svg" alt="Wawify"/>
-					<img src="/template/img/logo-canada.svg" alt="Wawify" width="100px"> 
+					<img src="/template/img/logo-canada.svg" alt="Wawify" width="100px">
 				</a>
 			{% endif %}
 			{% if operator.domain === 'waiter.cloud' %}
@@ -157,7 +157,7 @@
 					</div>
 					{% endif %}
   					-->
-					
+
 					{% if footer.themes.length %}
 					<div class="footer-menu__block">
 						<a href="/themes" class="footer-menu__title">{{{translate("Template.Themes")}}}</a>
@@ -194,6 +194,23 @@
 					</div>
 					{% endif %}
 
+					{% if footer.recipes.length %}
+					<div class="footer-menu__block">
+						<a href="/recipes" class="footer-menu__title">{{{translate("Template.Recipes")}}}</a>
+						<ul class="footer-menu__list">
+
+							{% for recipe in footer.recipes %}
+
+							<li class="footer-menu__item">
+								<a href="/recipe/{{{recipe.id}}}" class="footer-menu__link">{{{recipe.name}}}</a>
+							</li>
+
+							{% endfor %}
+
+						</ul>
+					</div>
+					{% endif %}
+
 					<!--
 					{% if footer.designs.length %}
 					<div class="footer-menu__block">
@@ -211,7 +228,7 @@
 						</ul>
 					</div>
 					{% endif %}
-					
+
 					{% if footer.products.length %}
 					<div class="footer-menu__block">
 						<a href="/products" class="footer-menu__title">{{{translate("Template.Products")}}}</a>
@@ -231,6 +248,7 @@
 					-->
 				</div>
 
+				{% if operator.domain === 'foodin.ca' %}
 				<div class="container">
 					{{{translate("Template.Language")}}} <br />
 					<button class="en" onclick="selectLanguage('en')">
@@ -240,6 +258,7 @@
 						FR
 					</button>
 				</div>
+				{% endif %}
 
 				<div class="footer-main__contacts footer-contacts">
 					<div class="footer-contacts__socials footer-socials">
@@ -384,7 +403,7 @@
 				.then((response) => response.json())
 				.then((data) => {
 					window.scrollTo(0, 0);
-	
+
 					location.reload();
 				})
 				.catch((error) => {
@@ -398,7 +417,9 @@
 	<script src="https://unpkg.com/swiper@6.8.4/swiper-bundle.min.js"></script>
 
 	<script src="/template/js/index.js"></script>
+	{% if operator.domain === 'foodin.ca' %}
 	<script src="/template/js/food.js"></script>
+	{% endif %}
 	<script></script>
 </body>
 
