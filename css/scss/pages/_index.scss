@@ -486,6 +486,94 @@
   }
 }
 
+.recipes-item-slider {
+  max-width: 380px;
+  margin-right: 40px;
+
+  .recipes-item__img-link {
+    img {
+      min-width: 380px;
+      height: 250px;
+    }
+  }
+
+  .recipes-item__title {
+    min-height: 120px;
+  }
+
+  .recipes-feature {
+    text-wrap: nowrap;
+
+    &__time,
+    &__serving,
+    &__difficulty {
+      gap: 6px;
+      padding: 10px 20px;
+
+      img {
+        width: 26px;
+        height: 26px;
+      }
+    }
+
+    &__serving {
+      img {
+        width: 28px;
+        height: 28px;
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .recipes-item-slider {
+    max-width: 300px;
+    margin-right: 30px;
+
+    .recipes-item__img-link {
+      img {
+        min-width: 300px;
+        height: 200px;
+      }
+    }
+
+    .recipes-item__title {
+      font-size: 20px;
+    }
+
+    .recipes-feature {
+      text-wrap: nowrap;
+
+      &__time,
+      &__serving,
+      &__difficulty {
+        gap: 5px;
+        padding: 8px 14px;
+
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      &__time {
+        padding-left: 5px;
+      }
+
+      &__difficulty {
+        padding-right: 5px;
+      }
+
+      &__serving {
+        img {
+          width: 26px;
+          height: 26px;
+        }
+      }
+    }
+  }
+}
+
 /* ------------------------------- /Products ------------------------------- */
 
 /* -------------------------------- Articles -------------------------------- */
@@ -793,7 +881,7 @@
   }
 }
 
-@media (max-width: 430px){
+@media (max-width: 430px) {
   .cta-form__row {
     input[type="tel"],
     input[type="email"],
@@ -947,6 +1035,7 @@
     font-weight: 600;
     color: #111;
     margin-bottom: 100px;
+    padding: 0 20px;
   }
 }
 
@@ -1034,6 +1123,21 @@
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .benefits {
+    &__title {
+      font-size: 32px;
+      margin-bottom: 40px;
+    }
+  }
+
+  .benefits-item{
+    &__info h3{
+      font-size: 28px;
     }
   }
 }

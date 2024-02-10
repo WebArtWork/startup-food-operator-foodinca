@@ -305,7 +305,7 @@
 		<div class="products__slider products-slider swiper">
 			<div class="themes-slider__wrapper swiper-wrapper">
 				{% for recipe in recipes %}
-				<div class="recipes-item">
+				<div class="recipes-item recipes-item-slider">
 					<div class="recipes-item__img">
 						<div class="recipes-item__favorites"></div>
 						<a href="{{{recipe.url || '/recipe/' + recipe.id}}}" class="recipes-item__img-link">
