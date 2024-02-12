@@ -1,6 +1,6 @@
 <section class="recipes">
 	<div class="recipes__container">
-		<h1 class="recipes__title">RECIPES</h1>
+		<h1 class="recipes__title">{{{translate("Template.RECIPES")}}}</h1>
 
 		<div class="recipes-search">
 			<form>
@@ -49,19 +49,19 @@
 						<div class="recipes-feature__difficulty-img">
 							<img src="/template/img/recipes/recipes-icons/star-light.svg" alt="star" />
 						</div>
-						<div class="recipes-feature__difficulty-text">Light</div>
+						<div class="recipes-feature__difficulty-text">{{{translate("Template.Light")}}}</div>
 						{% endif %}
 						{% if recipe.difficulty === 2 %}
 						<div class="recipes-feature__difficulty-img">
 							<img src="/template/img/recipes/recipes-icons/star-moderately.svg" alt="star" />
 						</div>
-						<div class="recipes-feature__difficulty-text">Moderately</div>
+						<div class="recipes-feature__difficulty-text">{{{translate("Template.Moderately")}}}</div>
 						{% endif %}
 						{% if recipe.difficulty >= 3 %}
 						<div class="recipes-feature__difficulty-img">
 							<img src="/template/img/recipes/recipes-icons/star-difficult.svg" alt="star" />
 						</div>
-						<div class="recipes-feature__difficulty-text">Difficult</div>
+						<div class="recipes-feature__difficulty-text">{{{translate("Template.Difficult")}}}</div>
 						{% endif %}
 					</div>
 				</div>
