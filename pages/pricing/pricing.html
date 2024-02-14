@@ -2,8 +2,10 @@
 	<div class="articles-page__container">
 		<div class="pricing-container">
 			<h1>
-				{{{translate("Template.Price List")}}}
+				{{{translate("Template.Plans and Features")}}}
 			</h1>
+			<p>{{{translate("Template.Explore various pricing options tailored to your needs. Whether you're using the online menu, engaging with customers through social networks, managing a business website, communicating with clients, or your clients would be using orders and processing secure payments, we have a solution for you.")}}}</p>
+			<p>{{{translate("Template.Choose a plan that suits your requirements or enhance your solution by purchasing individual features at any time. You don't have to buy the entire plan if you only need specific features. Start optimizing your operations today!")}}}</p>
 			<table>
 				<thead>
 					<tr>
@@ -23,7 +25,12 @@
 					{% for feature in features %}
 					<tr>
 						<td style="text-align: left" title="{{{feature.description}}}">
+							{% if feature.url %}
+							<a href="{{{feature.url}}}" target="_self">{{{feature.name}}}</a>
+							{% endif %}
+							{% if !feature.url %}
 							<span>{{{feature.name}}}</span>
+							{% endif %}
 							<span style="float: right;margin: 0; font-size: 20px; color: gray; font-weight: bold;">{{{feature.price}}}</span>
 						</td>
 						{% for plan in plans %}

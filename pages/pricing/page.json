@@ -20,6 +20,7 @@
 			"description": "Groups for your menu",
 			"price": "300 грн.",
 			"yearPrice": "3000 грн.",
+			"url": "https://waiter.cloud",
 			"inPlan": {
 				"1": false,
 				"2": true
