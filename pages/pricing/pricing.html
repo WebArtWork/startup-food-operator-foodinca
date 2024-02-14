@@ -12,7 +12,7 @@
 						<th>
 							<div class="plan">
 								<h2>{{{plan.name}}}</h2>
-								<p>${{{plan.price}}}</p>
+								<p>{{{plan.price}}}</p>
 								<button>Buy</button>
 							</div>
 						</th>
@@ -22,7 +22,10 @@
 				<tbody>
 					{% for feature in features %}
 					<tr>
-						<td style="text-align: left" title="{{{feature.description}}}">{{{feature.name}}}</td>
+						<td style="text-align: left" title="{{{feature.description}}}">
+							<span>{{{feature.name}}}</span>
+							<span style="float: right;margin: 0; font-size: 20px; color: gray; font-weight: bold;">{{{feature.price}}}</span>
+						</td>
 						{% for plan in plans %}
 						{% if !feature.inPlan[plan._id] %}
 						<td title="Feature is not included"><img src="/template/img/abolition.png" /></td>
