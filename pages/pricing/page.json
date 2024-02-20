@@ -4,6 +4,8 @@
 		{
 			"name": "Web site of the restaurant",
 			"description": "You get the QR menu",
+			"price": "300 грн.",
+			"yearPrice": "3000 грн.",
 			"inPlan": {
 				"1": true,
 				"2": true
@@ -16,6 +18,9 @@
 		{
 			"name": "Digital Menu with Unlimited Groups & Items",
 			"description": "Groups for your menu",
+			"price": "300 грн.",
+			"yearPrice": "3000 грн.",
+			"url": "https://waiter.cloud",
 			"inPlan": {
 				"1": false,
 				"2": true
@@ -29,13 +34,15 @@
 	"plans": [
 		{
 			"_id": "1",
-			"name": "basic",
-			"price": 0
+			"name": "start",
+			"price": "600 грн.",
+			"yearPrice": "6000 грн."
 		},
 		{
 			"_id": "2",
 			"name": "paid",
-			"price": 10
+			"price": "1200 грн.",
+			"yearPrice": "12000 грн."
 		}
 	]
 }

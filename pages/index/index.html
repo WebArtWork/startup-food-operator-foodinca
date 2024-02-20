@@ -158,7 +158,7 @@
 			<div class="themes-slider__wrapper swiper-wrapper">
 				{% for theme in themes %}
 				<div class="themes-slider__slide themes-slide swiper-slide">
-					<a href="https://{{{theme.folder || theme.id}}}.foodin.ca">
+					<a href="https://{{{theme.folder || theme.id}}}.waiter.cloud">
 						<img src="{{{theme.thumb}}}" alt="{{{theme.name}}}" />
 						<span class="themes-slide__subtitle">
 							{{{theme.name}}}
@@ -177,7 +177,7 @@
 		{{{translate("Template.Features which can improve your business")}}}
 	</h2>
 	<div class="benefits__container">
-		<div class="benefits-item">
+		<div class="benefits-item" id="menu">
 			<div class="benefits-item__info">
 			   <h3>{{{translate("Template.Online menu")}}}</h3>
 			   <p class="benefits-item__text">
@@ -195,7 +195,7 @@
 		    </div>
 			<img src="/template/img/benefits/1.jpg">
 		</div>
-		<div class="benefits-item">
+		<div class="benefits-item" id="business">
 			<div class="benefits-item__info">
 			   <h3>{{{translate("Template.Business Website")}}}</h3>
 			   <p class="benefits-item__text">
@@ -213,7 +213,7 @@
 		    </div>
 			<img src="/template/img/benefits/2.jpg">
 		</div>
-		<div class="benefits-item">
+		<div class="benefits-item" id="communication">
 			<div class="benefits-item__info">
 			   <h3>{{{translate("Template.Communication with Client")}}}</h3>
 			   <p class="benefits-item__text">
@@ -232,6 +232,7 @@
 		    </div>
 			<img src="/template/img/benefits/3.jpg">
 		</div>
+		<!--
 		<div class="benefits-item">
 			<div class="benefits-item__info">
 			   <h3>{{{translate("Template.Delivery and Takeaway")}}}</h3>
@@ -250,7 +251,8 @@
 		    </div>
 			<img src="/template/img/benefits/4.jpg">
 		</div>
-		<div class="benefits-item">
+		-->
+		<div class="benefits-item" id="order">
 			<div class="benefits-item__info">
 			   <h3>{{{translate("Template.Order Placement and Secure Payment")}}}</h3>
 			   <p class="benefits-item__text">
@@ -437,14 +439,22 @@
 			{{{translate("Template.Try on a website theme that you like for your online menu")}}}
 		</p>
 
-		<form class="cta-form">
+		<form class="cta-form" id="demo">
 			<div class="cta-form__row">
-				<input type="text" id="name" name="name" placeholder="Name" required>
-				<input type="tel" id="phone" name="phone" placeholder="Phone" required>
-				<input type="email" id="email" name="email" placeholder="Email" required>
-				<textarea id="comments" name="comments" placeholder="Comments" rows="4"></textarea>
-				<button type="submit">Connect with us</button>
+				<input type="text" name="name" placeholder="{{{translate("Template.Name")}}}" required>
+				<input type="tel" name="phone" placeholder="{{{translate("Template.Phone")}}}" required>
+				<input type="email" name="email" placeholder="{{{translate("Template.Email")}}}" required>
+				<textarea name="comment" placeholder="{{{translate("Template.Comment")}}}" rows="4"></textarea>
+				<button type="submit">{{{translate("Template.Connect with us")}}}</button>
 			  </div>
 		</form>
 	</div>
 </section>
+<script type="module">
+	import Dom from '/api/wjst/dom';
+	import Demo from '/api/wjst/demo';
+	Dom.submit('demo', async (submition)=>{
+		await Demo.create(submition);
+		alert('Demo has been requested');
+	});
+</script>

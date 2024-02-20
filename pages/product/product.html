@@ -40,7 +40,9 @@
                 <span class="product-info__price">400 $</span>
                 <p class="product-info__desc">{{{product.description}}}</p>
                 <div class="product-info__colors product-colors">
-                    <span class="product-colors__subtitle">Color</span>
+                    <span class="product-colors__subtitle">
+                        {{{translate("Template.Color")}}}
+                    </span>
 
                     <div class="product-colors__wrapper">
                         <span class="product-colors__color product-colors__color_active"
@@ -56,7 +58,7 @@
 
                 <select class="product-info__sizes">
                     <option value=" 0" class="product-info__size" disabled>
-                        Choose a Size
+                        {{{translate("Template.Choose a Size")}}}
                     </option>
                     <option value="xs" class="product-info__size">XS</option>
                     <option value="s" class="product-info__size">S</option>
@@ -69,29 +71,31 @@
                 </select>
 
                 <button class="product-info__size-guide" data-fancybox data-src="#dialog-content">
-                    Size Guide
+                    {{{translate("Template.Size Guide")}}}
                 </button>
 
 
                 <div class="product-info__details product-details">
-                    <span class="product-details__subtitle">Details</span>
+                    <span class="product-details__subtitle">
+                        {{{translate("Template.Details")}}}
+                    </span>
                     <p class="product-details__text">
                         {{{product.data.details}}}
                     </p>
                 </div>
                 <span class="product-info__store">
-                    The product of the Panianka store
+                    {{{translate("Template.The product of the Panianka store")}}}
                 </span>
             </div>
         </div>
 
         <div id="dialog-content" class="product-info__size-guide-modal size-guide"
             style="display: none; max-width: 900px">
-            <h3 style="text-align: center; font-weight: 600">Size Guide</h3>
+            <h3 style="text-align: center; font-weight: 600">
+                {{{translate("Template.Size Guide")}}}
+            </h3>
             <p style="text-align: center; font-weight: 300; margin-top: 20px">
-                Please see below for our current sizing options that we offer.
-                For any additional sizing questions or concerns please contact
-                us and we'll be happy to help.
+                {{{translate("Template.Please see below for our current sizing options that we offer. For any additional sizing questions or concerns please contact us and we'll be happy to help.")}}}
             </p>
 
             <table style="width: 100%; border-collapse: collapse; margin-top: 20px">
@@ -101,10 +105,17 @@
 						text-align: center;
 					">
                     <tr>
-                        <th style="padding: 15px" scope="col">Size</th>
-                        <th scope="col">Bust</th>
-                        <th scope="col">Waist</th>
-                        <th scope="col">Hip</th>
+                        <th style="padding: 15px" scope="col">
+                            {{{translate("Template.Size")}}}</th>
+                        <th scope="col">
+                            {{{translate("Template.Bust")}}}
+                        </th>
+                        <th scope="col">
+                            {{{translate("Template.Waist")}}}
+                        </th>
+                        <th scope="col">
+                            {{{translate("Template.Hip")}}}
+                        </th>
                     </tr>
                 </thead>
                 <tbody style="padding: 15px; text-align: center">
@@ -143,7 +154,9 @@
         </div>
 
         <div class="product__also-like also-like">
-            <h3 class="also-like__title">You may also like</h3>
+            <h3 class="also-like__title">
+                {{{translate("Template.You may also like")}}}
+            </h3>
 
             <div class="also-like__slider also-like-slider swiper">
                 <div class="also-like-slider__wrapper swiper-wrapper">

@@ -10,14 +10,14 @@
 				<div class="recipes-feature__time-img">
 					<img src="/template/img/recipes/recipes-icons/time.svg" alt="time" />
 				</div>
-				<div class="recipes-feature__time-title">COOK TIME</div>
+				<div class="recipes-feature__time-title">{{{translate("Template.COOK TIME")}}}</div>
 				<div class="recipes-feature__time-text">{{{recipe.cookingTime}}}</div>
 			</div>
 			<div class="recipes-feature__serving">
 				<div class="recipes-feature__serving-img">
 					<img src="/template/img/recipes/recipes-icons/serving.svg" alt="serving" />
 				</div>
-				<div class="recipes-feature__serving-title">SERVING</div>
+				<div class="recipes-feature__serving-title">{{{translate("Template.SERVING")}}}</div>
 				<div class="recipes-feature__serving-text">{{{recipe.serving}}}</div>
 			</div>
 			<div class="recipes-feature__difficulty">
@@ -25,22 +25,22 @@
 				<div class="recipes-feature__difficulty-img">
 					<img src="/template/img/recipes/recipes-icons/star-light.svg" alt="star" />
 				</div>
-				<div class="recipes-feature__difficulty-title">DIFFICULTY</div>
+				<div class="recipes-feature__difficulty-title">{{{translate("Template.DIFFICULTY")}}}</div>
 				<div class="recipes-feature__difficulty-text">Light</div>
 				{% endif %}
 				{% if recipe.difficulty === 2 %}
 				<div class="recipes-feature__difficulty-img">
 					<img src="/template/img/recipes/recipes-icons/star-moderately.svg" alt="star" />
 				</div>
-				<div class="recipes-feature__difficulty-title">DIFFICULTY</div>
-				<div class="recipes-feature__difficulty-text">Moderately</div>
+				<div class="recipes-feature__difficulty-title">{{{translate("Template.DIFFICULTY")}}}</div>
+				<div class="recipes-feature__difficulty-text">{{{translate("Template.Moderately")}}}</div>
 				{% endif %}
 				{% if recipe.difficulty >= 3 %}
 				<div class="recipes-feature__difficulty-img">
 					<img src="/template/img/recipes/recipes-icons/star-difficult.svg" alt="star" />
 				</div>
-				<div class="recipes-feature__difficulty-title">DIFFICULTY</div>
-				<div class="recipes-feature__difficulty-text">Difficult</div>
+				<div class="recipes-feature__difficulty-title">{{{translate("Template.DIFFICULTY")}}}</div>
+				<div class="recipes-feature__difficulty-text">{{{translate("Template.Difficult")}}}</div>
 				{% endif %}
 			</div>
 		</div>
@@ -48,7 +48,7 @@
 		<h2 class="recipe__descr">{{{recipe.description}}}</h2>
 
 		<div class="ingredients">
-			<div class="ingredients__title">INGREDIENTS</div>
+			<div class="ingredients__title">{{{translate("Template.INGREDIENTS")}}}</div>
 			<div class="ingredients__info">
 				<div class="ingredients-list">
 					<!-- <div class="ingredients-list__title">{{{ingredient.name}}}</div> -->
@@ -62,7 +62,7 @@
 		</div>
 
 		<div class="cooking">
-			<div class="cooking__title">step by step cooking</div>
+			<div class="cooking__title">{{{translate("Template.step by step cooking")}}}</div>
 			{% for step in recipe.cookingSteps %}
 			<div class="cooking-item">
 				<div class="cooking-item__steps">

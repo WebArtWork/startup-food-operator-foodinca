@@ -158,12 +158,12 @@
 					{% endif %}
   					-->
 
-					{% if footer.themes.length %}
+					{% if themes.length %}
 					<div class="footer-menu__block">
 						<a href="/themes" class="footer-menu__title">{{{translate("Template.Themes")}}}</a>
 						<ul class="footer-menu__list">
 
-							{% for theme in footer.themes %}
+							{% for theme in themes %}
 
 							<li class="footer-menu__item">
 								<a href="/theme/{{{theme.id}}}" class="footer-menu__link">{{{theme.name}}}</a>
@@ -361,7 +361,7 @@
 							{{{translate("Template.Receive exclusive offers in your mailbox")}}}
 						</h4>
 
-						<form action="#" class="footer-subscribtion__form">
+						<form id="subscription" class="footer-subscribtion__form">
 							<span class="footer-subscribtion__icon">
 								<svg width="24" height="19" viewBox="0 0 24 19" fill="none"
 									xmlns="http://www.w3.org/2000/svg">
@@ -370,12 +370,19 @@
 										fill="var(--primary-color)" />
 								</svg>
 							</span>
-							<input type="email" class="footer-subscribtion__input" id="footer-input"
-								placeholder="Enter Your email" required />
+							<input type="email" class="footer-subscribtion__input" name="email" placeholder="Enter Your email" required />
 							<button type="submit" class="footer-subscribtion__button" id="footer-button">
 								Subscribe
 							</button>
 						</form>
+						<script type="module">
+							import Dom from '/api/wjst/dom';
+							import Subscription from '/api/wjst/subscription';
+							Dom.submit('subscription', async (submition) => {
+								await Subscription.subscribe(submition.email);
+								alert('You have subscribed on our news');
+							});
+						</script>
 					</div>
 				</div>
 			</div>
@@ -386,7 +393,12 @@
 				</div>
 
 				<div class="footer-rights__company">
+					{% if operator.domain === 'waiter.cloud' %}
+					<span>&#169;</span>Waiter Cloud, 2024
+					{% endif %}
+					{% if operator.domain === 'foodin.ca' %}
 					<span>&#169;</span>Food In Canada, 2024
+					{% endif %}
 				</div>
 			</div>
 		</div>
