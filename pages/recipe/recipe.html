@@ -1,81 +1,116 @@
 <section class="recipe">
-	<div class="recipe__container">
-		<h1 class="recipe__title">{{{recipe.name}}}</h1>
-		<div class="recipe__img">
-			<div class="recipe__favorites"></div>
-			<img src="{{{recipe.thumb}}}" alt="{{{recipe.name}}}" />
-		</div>
-		<div class="recipes-feature recipe-feature">
-			<div class="recipes-feature__time">
-				<div class="recipes-feature__time-img">
-					<img src="/template/img/recipes/recipes-icons/time.svg" alt="time" />
-				</div>
-				<div class="recipes-feature__time-title">{{{translate("Template.COOK TIME")}}}</div>
-				<div class="recipes-feature__time-text">{{{recipe.cookingTime}}}</div>
-			</div>
-			<div class="recipes-feature__serving">
-				<div class="recipes-feature__serving-img">
-					<img src="/template/img/recipes/recipes-icons/serving.svg" alt="serving" />
-				</div>
-				<div class="recipes-feature__serving-title">{{{translate("Template.SERVING")}}}</div>
-				<div class="recipes-feature__serving-text">{{{recipe.serving}}}</div>
-			</div>
-			<div class="recipes-feature__difficulty">
-				{% if recipe.difficulty === 1 %}
-				<div class="recipes-feature__difficulty-img">
-					<img src="/template/img/recipes/recipes-icons/star-light.svg" alt="star" />
-				</div>
-				<div class="recipes-feature__difficulty-title">{{{translate("Template.DIFFICULTY")}}}</div>
-				<div class="recipes-feature__difficulty-text">Light</div>
-				{% endif %}
-				{% if recipe.difficulty === 2 %}
-				<div class="recipes-feature__difficulty-img">
-					<img src="/template/img/recipes/recipes-icons/star-moderately.svg" alt="star" />
-				</div>
-				<div class="recipes-feature__difficulty-title">{{{translate("Template.DIFFICULTY")}}}</div>
-				<div class="recipes-feature__difficulty-text">{{{translate("Template.Moderately")}}}</div>
-				{% endif %}
-				{% if recipe.difficulty >= 3 %}
-				<div class="recipes-feature__difficulty-img">
-					<img src="/template/img/recipes/recipes-icons/star-difficult.svg" alt="star" />
-				</div>
-				<div class="recipes-feature__difficulty-title">{{{translate("Template.DIFFICULTY")}}}</div>
-				<div class="recipes-feature__difficulty-text">{{{translate("Template.Difficult")}}}</div>
-				{% endif %}
-			</div>
-		</div>
+  <div class="recipe__container">
+    <h1 class="recipe__title">{{{recipe.name}}}</h1>
+    <div class="recipe__img">
+      <div class="recipe__favorites"></div>
+      <img src="{{{recipe.thumb}}}" alt="{{{recipe.name}}}" />
+    </div>
+    <div class="recipes-feature recipe-feature">
+      <div class="recipes-feature__time">
+        <div class="recipes-feature__time-img">
+          <img src="/template/img/recipes/recipes-icons/time.svg" alt="time" />
+        </div>
+        <div class="recipes-feature__time-title">
+          {{{translate("Template.COOK TIME")}}}
+        </div>
+        <div class="recipes-feature__time-text">{{{recipe.cookingTime}}}</div>
+      </div>
+      <div class="recipes-feature__serving">
+        <div class="recipes-feature__serving-img">
+          <img
+            src="/template/img/recipes/recipes-icons/serving.svg"
+            alt="serving"
+          />
+        </div>
+        <div class="recipes-feature__serving-title">
+          {{{translate("Template.SERVING")}}}
+        </div>
+        <div class="recipes-feature__serving-text">{{{recipe.serving}}}</div>
+      </div>
+      <div class="recipes-feature__difficulty">
+        {% if recipe.difficulty === 1 %}
+        <div class="recipes-feature__difficulty-img">
+          <img
+            src="/template/img/recipes/recipes-icons/star-light.svg"
+            alt="star"
+          />
+        </div>
+        <div class="recipes-feature__difficulty-title">
+          {{{translate("Template.DIFFICULTY")}}}
+        </div>
+        <div class="recipes-feature__difficulty-text">Light</div>
+        {% endif %} {% if recipe.difficulty === 2 %}
+        <div class="recipes-feature__difficulty-img">
+          <img
+            src="/template/img/recipes/recipes-icons/star-moderately.svg"
+            alt="star"
+          />
+        </div>
+        <div class="recipes-feature__difficulty-title">
+          {{{translate("Template.DIFFICULTY")}}}
+        </div>
+        <div class="recipes-feature__difficulty-text">
+          {{{translate("Template.Moderately")}}}
+        </div>
+        {% endif %} {% if recipe.difficulty >= 3 %}
+        <div class="recipes-feature__difficulty-img">
+          <img
+            src="/template/img/recipes/recipes-icons/star-difficult.svg"
+            alt="star"
+          />
+        </div>
+        <div class="recipes-feature__difficulty-title">
+          {{{translate("Template.DIFFICULTY")}}}
+        </div>
+        <div class="recipes-feature__difficulty-text">
+          {{{translate("Template.Difficult")}}}
+        </div>
+        {% endif %}
+      </div>
+    </div>
 
-		<h2 class="recipe__descr">{{{recipe.description}}}</h2>
+    <h2 class="recipe__descr">{{{recipe.description}}}</h2>
 
-		<div class="ingredients">
-			<div class="ingredients__title">{{{translate("Template.INGREDIENTS")}}}</div>
-			<div class="ingredients__info">
-				<div class="ingredients-list">
-					<!-- <div class="ingredients-list__title">{{{ingredient.name}}}</div> -->
-					<ul class="ingredients-list__ul">
-						{% for ingredient in recipe.ingredients %}
-						<li class="ingredients-list__li">{{{ingredient.text}}}</li>
-						{% endfor %}
-					</ul>
-				</div>
-			</div>
-		</div>
+    <div class="ingredients">
+      <div class="ingredients__title">
+        {{{translate("Template.INGREDIENTS")}}}
+      </div>
+      <div class="ingredients__info">
+        <div class="ingredients-list">
+          <!-- <div class="ingredients-list__title">{{{ingredient.name}}}</div> -->
+          <ul class="ingredients-list__ul">
+            {% for ingredient in recipe.ingredients %}
+            <li class="ingredients-list__li">
+              <input type="checkbox" id="ingredient-checkbox{{{loop.index}}}" />
+              <label for="ingredient-checkbox{{{loop.index}}}">{{{ingredient.text}}}</label>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
 
-		<div class="cooking">
-			<div class="cooking__title">{{{translate("Template.step by step cooking")}}}</div>
-			{% for step in recipe.cookingSteps %}
-			<div class="cooking-item">
-				<div class="cooking-item__steps">
-					step&nbsp;<span>{{{loop.index}}}</span>
-				</div>
-				<div class="cooking-item__info">
-					<div class="cooking-item__info-descr">{{{step.text}}}</div>
-					{% if step.thumb %}
-					<img src="{{{step.thumb}}}" alt="{{{step.thumb}}}" class="cooking-item__info-img" />
-					{% endif %}
-				</div>
-			</div>
-			{% endfor %}
-		</div>
-	</div>
+    <div class="cooking">
+      <div class="cooking__title">
+        {{{translate("Template.step by step cooking")}}}
+      </div>
+      {% for step in recipe.cookingSteps %}
+      <div class="cooking-item">
+        <div class="cooking-item__steps">
+          step&nbsp;<span>{{{loop.index}}}</span>
+        </div>
+        <div class="cooking-item__info">
+          <div class="cooking-item__info-descr">{{{step.text}}}</div>
+          {% if step.thumb %}
+          <img
+            src="{{{step.thumb}}}"
+            alt="{{{step.thumb}}}"
+            class="cooking-item__info-img"
+          />
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 </section>
