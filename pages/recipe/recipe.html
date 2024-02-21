@@ -81,9 +81,27 @@
           <ul class="ingredients-list__ul">
             {% for ingredient in recipe.ingredients %}
             <li class="ingredients-list__li">
-              <input type="checkbox" id="ingredient-checkbox{{{loop.index}}}" />
-              <label for="ingredient-checkbox{{{loop.index}}}">{{{ingredient.text}}}</label>
+              <input
+                type="checkbox"
+                id="ingredient-checkbox{{{loop.index}}}"
+                name="ingredient-checkbox{{{loop.index}}}"
+              />
+              <label for="ingredient-checkbox{{{loop.index}}}"
+                >{{{ingredient.text}}}</label
+              >
             </li>
+            <script type="module">
+              const id = "ingredient-checkbox{{{loop.index}}}";
+              const element = document.getElementById(id);
+              element.checked = localStorage.getItem(id) ? true : false;
+              element.addEventListener("change", () => {
+                if (element.checked) {
+                  localStorage.setItem(id, "true");
+                } else {
+                  localStorage.removeItem(id);
+                }
+              });
+            </script>
             {% endfor %}
           </ul>
         </div>
