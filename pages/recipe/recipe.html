@@ -91,10 +91,10 @@
               >
             </li>
             <script type="module">
+              import Dom from "/api/wjst/dom";
               const id = "ingredient-checkbox{{{loop.index}}}";
-              const element = document.getElementById(id);
-              element.checked = localStorage.getItem(id) ? true : false;
-              element.addEventListener("change", () => {
+              Dom.element(id).checked = localStorage.getItem(id) ? true : false;
+              Dom.change(id, (element) => {
                 if (element.checked) {
                   localStorage.setItem(id, "true");
                 } else {
