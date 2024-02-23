@@ -4,6 +4,7 @@
   max-width: 1200px;
   margin: 0 auto;
   font-size: 18px;
+  display: block;
 }
 
 .pricing-container h1 {
@@ -57,12 +58,17 @@ th, td {
   border-left: 2px solid #ddd;
 
 }
-.pricing-container th{
-
-}
 
 @media only screen and (max-width: 768px) {
   .plan {
     width: 100%;
   }
+}
+
+.monthly-price, .yearly-price {
+  display: none;
+}
+
+.monthly-price.show, .yearly-price.show {
+  display: block;
 }

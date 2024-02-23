@@ -35,14 +35,14 @@
 		{
 			"_id": "1",
 			"name": "start",
-			"price": "600 грн.",
-			"yearPrice": "6000 грн."
+			"price": "300 грн.",
+			"yearPrice":"3600 грн"
 		},
 		{
 			"_id": "2",
 			"name": "paid",
-			"price": "1200 грн.",
-			"yearPrice": "12000 грн."
+			"price": "300 грн.",
+			"yearPrice":"3600 грн"
 		}
 	]
 }
