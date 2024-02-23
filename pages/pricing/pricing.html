@@ -61,16 +61,22 @@
 
 
 <script>
-    function selectBilling(billingType) {
-		const buttons = document.querySelectorAll('.billing-buttons button');
+    document.addEventListener('DOMContentLoaded', function() {
+        // Викликати функцію selectBilling при завантаженні сторінки з параметром 'monthly'
+        selectBilling('monthly');
+    });
 
-buttons.forEach(button => {
-	if (button.id === `${billingType}-button`) {
-		button.classList.add('active');
-	} else {
-		button.classList.remove('active');
-	}
-});
+    function selectBilling(billingType) {
+        const buttons = document.querySelectorAll('.billing-buttons button');
+
+        buttons.forEach(button => {
+            if (button.id === `${billingType}-button`) {
+                button.classList.add('active');
+            } else {
+                button.classList.remove('active');
+            }
+        });
+
         const plans = document.querySelectorAll('.plan');
 
         plans.forEach(plan => {
