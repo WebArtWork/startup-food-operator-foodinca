@@ -81,3 +81,6 @@ th, td {
   border-radius: 15px;
   border: none;
 }
+#monthly-button.active, #yearly-button.active {
+  color: var(--tertiary-color);
+}
