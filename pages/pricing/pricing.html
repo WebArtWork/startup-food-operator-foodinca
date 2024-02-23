@@ -10,12 +10,11 @@
                 <thead>
                     <tr>
                         <th>
-                            <label for="billing-frequency">Billing Frequency:</label>
-                            <select id="billing-frequency">
-                                <option value="monthly">Monthly</option>
-                                <option value="yearly">Yearly</option>
-                            </select>
-                        </th>
+							<div class="billing-buttons">
+								<button id="monthly-button" onclick="selectBilling('monthly')">Monthly</button>
+								<button id="yearly-button" onclick="selectBilling('yearly')">Yearly</button>
+							</div>
+						</th>
                         {% for plan in plans %}
                         <th>
                             <div class="plan" id="plan-{{ plan._id }}">
@@ -30,7 +29,7 @@
                 </thead>
                 <tbody>
                     {% for feature in features %}
-					<tr>
+                        <tr>
 						<td style="text-align: left" title="{{{feature.description}}}" class="plan" id="plan-{{ plan._id }}">
 							{% if feature.url %}
 							<a href="{{{feature.url}}}" target="_self">{{{feature.name}}}</a>
@@ -62,20 +61,15 @@
 
 
 <script>
-    const billingFrequencySelect = document.getElementById('billing-frequency');
-    const plans = document.querySelectorAll('.plan');
-
-    billingFrequencySelect.addEventListener('change', function () {
-        const selectedFrequency = billingFrequencySelect.value;
-        const priceClassToShow = selectedFrequency === 'monthly' ? 'monthly-price' : 'yearly-price';
-        const priceClassToHide = selectedFrequency === 'monthly' ? 'yearly-price' : 'monthly-price';
+    function selectBilling(billingType) {
+        const plans = document.querySelectorAll('.plan');
 
         plans.forEach(plan => {
-            const priceToShow = plan.querySelector(`.${priceClassToShow}`);
-            const priceToHide = plan.querySelector(`.${priceClassToHide}`);
+            const priceToShow = billingType === 'monthly' ? plan.querySelector('.monthly-price') : plan.querySelector('.yearly-price');
+            const priceToHide = billingType === 'monthly' ? plan.querySelector('.yearly-price') : plan.querySelector('.monthly-price');
 
             priceToShow.classList.add('show');
             priceToHide.classList.remove('show');
         });
-    });
+    }
 </script>
