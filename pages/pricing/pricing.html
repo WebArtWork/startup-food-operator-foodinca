@@ -19,8 +19,8 @@
                         <th>
                             <div class="plan" id="plan-{{ plan._id }}">
                                 <h2>{{{plan.name}}}</h2>
-                                <p class="monthly-price">{{{plan.price}}}</p>
-                                <p class="yearly-price">{{{plan.yearPrice}}}</p>
+                                <p class="monthly-price">{{{plan.price}}} {{{currency}}}</p>
+                                <p class="yearly-price">{{{plan.yearPrice}}} {{{currency}}}</p>
                                 <button>Buy</button>
                             </div>
                         </th>
@@ -37,8 +37,8 @@
 							{% if !feature.url %}
 							<span>{{{feature.name}}}</span>
 							{% endif %}
-							<span style="float: right;margin: 0; font-size: 20px; color: gray; font-weight: bold;" class="monthly-price">{{{feature.price}}}</span>
-							<span style="float: right;margin: 0; font-size: 20px; color: gray; font-weight: bold;" class="yearly-price">{{{feature.yearPrice}}}</span>
+							<span style="float: right;margin: 0; font-size: 20px; color: gray; font-weight: bold;" class="monthly-price">{{{feature.price}}} {{{currency}}}</span>
+							<span style="float: right;margin: 0; font-size: 20px; color: gray; font-weight: bold;" class="yearly-price">{{{feature.yearPrice}}} {{{currency}}}</span>
 						</td>
 						{% for plan in plans %}
 						{% if !feature.inPlan[plan._id] %}

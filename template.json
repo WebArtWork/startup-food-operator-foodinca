@@ -1,5 +1,6 @@
 {
   "operator": { "domain": "waiter.cloud" },
+  "currency": "CA$",
   "title": "Welcome to waw Template",
   "description": "description",
   "keywords": "keywords",
