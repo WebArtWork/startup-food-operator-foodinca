@@ -175,8 +175,6 @@
 					</div>
 					{% endif %}
 
-
-
 					{% if footer.stores.length %}
 					<div class="footer-menu__block">
 						<a href="/stores" class="footer-menu__title">{{{translate("Template.Partners")}}}</a>
@@ -210,6 +208,36 @@
 						</ul>
 					</div>
 					{% endif %}
+
+					{% if languages.length %}
+					<div class="footer-menu__block">
+						<a href="/recipes" class="footer-menu__title">{{{translate("Template.Languages")}}}</a>
+						<ul class="footer-menu__list">
+							{% for language in languages %}
+							<li class="footer-menu__item" language="{{{language|json}}}">
+								<a class="footer-menu__link" style="cursor: pointer;">
+									{{{language.name}}}
+								</a>
+							</li>
+							{% endfor %}
+						</ul>
+					</div>
+					{% endif %}
+					<script type="module">
+						import Dom from '/api/wjst/dom';
+						import Http from '/api/wjst/http';
+						Dom.click('language', async (element) => {
+							const language = JSON.parse(element.getAttribute('language'));
+							localStorage.setItem(
+								'temp_storage_language',
+								element.getAttribute('language')
+							);
+							await Http.post('/api/translate/set', {
+								language: language.code
+							});
+							location.reload();
+						});
+					</script>
 
 					<!--
 					{% if footer.designs.length %}

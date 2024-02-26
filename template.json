@@ -12,6 +12,18 @@
   },
   "moderators": [],
   "scss": "scss/index.scss",
+  "languages": [
+    {
+      "name": "English",
+      "origin": "English",
+      "code": "en"
+    },
+    {
+      "name": "French",
+      "origin": "Français",
+      "code": "fr"
+    }
+  ],
   "footer": {
     "groups": [
       {
