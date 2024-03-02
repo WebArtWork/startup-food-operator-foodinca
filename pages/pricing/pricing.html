@@ -21,7 +21,7 @@
                                 <h2>{{{plan.name}}}</h2>
                                 <p class="monthly-price">{{{plan.price}}} {{{currency}}}</p>
                                 <p class="yearly-price">{{{plan.yearPrice}}} {{{currency}}}</p>
-                                <button>Buy</button>
+								<a class="abutton" href="/manage/profile/{{{plan._id}}}">Buy</a>
                             </div>
                         </th>
                         {% endfor %}
@@ -39,6 +39,7 @@
 							{% endif %}
 							<span style="float: right;margin: 0; font-size: 20px; color: gray; font-weight: bold;" class="monthly-price">{{{feature.price}}} {{{currency}}}</span>
 							<span style="float: right;margin: 0; font-size: 20px; color: gray; font-weight: bold;" class="yearly-price">{{{feature.yearPrice}}} {{{currency}}}</span>
+							<a class="abutton" href="/manage/profile/{{{feature._id}}}">Buy</a>
 						</td>
 						{% for plan in plans %}
 						{% if !feature.inPlan[plan._id] %}
