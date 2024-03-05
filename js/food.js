@@ -1,4 +1,3 @@
-console.log('started properly');
 let logo = document.querySelectorAll('.topbar__logo');
 let eye = '<div class="eye"></div>';
 logo.forEach(element => {
@@ -9,7 +8,6 @@ logo.forEach(element => {
 
 $("body").mousemove(function(event) {
     var eye = $(".eye");
-    console.log('eye', eye)
     var x = (eye.offset().left) + (eye.width() / 2);
     var y = (eye.offset().top) + (eye.height() / 2);
     var rad = Math.atan2(event.pageX - x, event.pageY - y);
