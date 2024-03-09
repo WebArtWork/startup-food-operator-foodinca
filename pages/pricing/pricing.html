@@ -6,6 +6,7 @@
             </h1>
             <p>{{{translate("Template.Explore various pricing options tailored to your needs. Whether you're using the online menu, engaging with customers through social networks, managing a business website, communicating with clients, or your clients would be using orders and processing secure payments, we have a solution for you.")}}}</p>
             <p>{{{translate("Template.Choose a plan that suits your requirements or enhance your solution by purchasing individual features at any time. You don't have to buy the entire plan if you only need specific features. Start optimizing your operations today!")}}}</p>
+            <div class="table-container">
             <table>
                 <thead>
                     <tr>
@@ -37,8 +38,8 @@
 							{% if !feature.url %}
 							<span>{{{feature.name}}}</span>
 							{% endif %}
-							<span style="float: right;margin: 0; font-size: 20px; color: gray; font-weight: bold;" class="monthly-price">{{{feature.price}}} {{{currency}}}</span>
-							<span style="float: right;margin: 0; font-size: 20px; color: gray; font-weight: bold;" class="yearly-price">{{{feature.yearPrice}}} {{{currency}}}</span>
+							<span class="monthly-price">{{{feature.price}}} {{{currency}}}</span>
+							<span class="yearly-price">{{{feature.yearPrice}}} {{{currency}}}</span>
 							<a class="abutton" href="/manage/profile/{{{feature._id}}}">Buy</a>
 						</td>
 						{% for plan in plans %}
@@ -56,6 +57,7 @@
 					{% endfor %}
 				</tbody>
 			</table>
+        </div>
 		</div>
 	</div>
 </section>
