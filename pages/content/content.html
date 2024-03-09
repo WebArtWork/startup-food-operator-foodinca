@@ -1,23 +1,11 @@
-<a href="/wiki">wiki</a>
-<a href="/themeswiki">themeswiki</a>
-<a href="/themes">themes</a>
-<a href="/team">team</a>
-<a href="/services">services</a>
-<a href="/service">service</a>
-<a href="/products">products</a>
-<a href="/product">product</a>
-<a href="/portfolios">portfolios</a>
-<a href="/portfolio">portfolio</a>
-<a href="/plan">plan</a>
-<a href="/index">index</a>
-<a href="/furniturewiki">furniturewiki</a>
-<a href="/furnitureteam">furnitureteam</a>
-<a href="/furnitureplan">furnitureplan</a>
-<a href="/furniture">furniture</a>
-<a href="/estates">estates</a>
-<a href="/estate">estate</a>
-<a href="/content">content</a>
-<a href="/articles">articles</a>
-<a href="/article">article</a>
-<a href="/aboutus">aboutus</a>
-<p>Page Content is connected</p>
+<div class="text-container">
+	<h1>{{{translate("Template." + content.name)}}}</h1>
+
+	<img src="{{{content.thumb}}}" alt="{{{content.name}}}">
+
+	<pre>
+		{{{translate("Template." + content.description)|safe}}}
+	</pre>
+
+	<p>{{{translate("Template.Last Updated:")}}} 2024-03-07</p>
+</div>

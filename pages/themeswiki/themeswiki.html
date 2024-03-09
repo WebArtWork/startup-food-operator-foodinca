@@ -1,16 +1,43 @@
-<a href="/wiki">wiki</a>
-<a href="/themeswiki">themeswiki</a>
-<a href="/team">team</a>
-<a href="/stores">stores</a>
-<a href="/store">store</a>
-<a href="/profiles">profiles</a>
-<a href="/profile">profile</a>
-<a href="/products">products</a>
-<a href="/product">product</a>
-<a href="/plan">plan</a>
-<a href="/index">index</a>
-<a href="/designs">designs</a>
-<a href="/content">content</a>
-<a href="/articles">articles</a>
-<a href="/article">article</a>
-<p>Page Themeswiki is connected</p>
+<div class="text-container">
+	<h1>{{{translate("Template.Build New Theme")}}}</h1>
+
+	<h3>Dependencies</h3>
+
+	<p>We are working with node.js technology which you have to install to work with our themes. You can install it over <a href="https://nodejs.org/en">nodejs.org</a> where would be better to use LTS version. To verify that you have installed node, you can simply write <code>node -v</code> in terminal.</p>
+
+	<p>After that you have to install <code>waw</code> framework which handle our themes code. You can do that by run command <code>npm i -g waw</code>.</p>
+
+	<p>That's all, you are ready to start coding.</p>
+
+	<h3>Start</h3>
+
+	<p>To create new theme you have to start creation proccess with command <code>waw new</code> where you will provide theme name, then select startup option, then pick food startup. After that a folder with project name will be generated with default theme project</p>
+
+	<p>To start the server locally you have to type <code>waw</code> in the root of your project. If you didn't change configurations, you should see your theme on <a href="https://localhost:8000">localhost:8000</a>. Page will be updated automatically while you code, just there is an issue when you update json, you have to restart the server.</p>
+
+	<p>First thing which you should consider is variables, which you set on <code>template.json</code> and later on business which will use your theme can configure them self. If variable should have value in any case, fill that value in the html. Values which you put on <code>template.json</code> will be used as default for user.</p>
+
+	<p>Common logic can be used, where in index.html in root folder we put header and footer and those will be on all pages. Our first feature is menu, so as suggestion is to start with products page, which will be root for most of the users.</p>
+
+	<p>In <code>template.json</code> there is prefix, which you should modify as long as all urls on your project. Default is <code>/template</code> and you provide access to theme files, for example if you wanna show image from folder img you can use next code: <code>{{{'<img src="/template/img/avatar.png" />'}}}</code>. Prefix should be unique across all themes, so better use something from your name, for example I would use <code>/honchardenys</code> which would modify the image url to <code>/honchardenys/img/avatar.png</code></p>
+
+	<p>Translation is also supported, you should write your static text within wjst function, without html tags. Each phrase should start with your prefix and dot, example <code>{ { {translate('honchardenys.Hello World')} } }</code> which later will be automatically translated without the prefix.</p>
+
+	<p>If you are going to add price, you should add currency separately and set default which you believe is best on <code>template.json</code>, example <code>{ { {product.price} } } { { {currency} } }</code></p>
+
+	<p>We have <code>css/index.css</code> file which is generated based on <code>css/index.scss</code>. You can always ignore scss and use your own css files</p>
+
+	<h3>Features</h3>
+
+	<p>Our first feature is Menu it self, page products and probably product, which will inform clients about products which business has. It provide basic information for client which bisit them. This is very begginging of collaboration, so it must be perfect to get wow effect from business owners</p>
+
+	<p>Our next feature is business site, where logic of it is to have full SEO support, improve user site in searches, google maps etc. To cover this feature you have to design index, articles, article and content pages. Main idea is to get allot of SEO texts which will improve understanding of what user site is about.</p>
+
+	<p>Next feature is communication with client, where you don't have to add new pages, just have to improve current. Client should be able to fill form about business, to improve owner understanding about their business. Client should be able to call a waiter. On product client should be able to leave a review. Keep notes on order if such is enabled. Provide feedback on suggested product if such enabled.</p>
+
+	<p>Order feature is one of the more important features, as it allow business to grow up and manage their workflow and automatic processes. Basic idea is to release some of employee work to our software, for example when clients get in and can see live menu before even waiter provide it to them. We have to add page cart where we will see our current order with options to see order from same table and unite the order. History page where we will see our orders history with option to re-order the same order or add products to cart or clone order into our cart. Order can be in place, take out or delivery, which give allot of options for clients to buy business products.</p>
+
+	<p>Multiple business allow owners to have multiple sites, handle multiple businesses. This allow control better products, stores, werehouses etc. You hve to add location where we put list of all businesses.</p>
+
+	<p>{{{translate("Template.Last Updated:")}}} 2024-03-07</p>
+</div>
